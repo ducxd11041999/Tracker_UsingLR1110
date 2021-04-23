@@ -99,6 +99,7 @@ extern "C" {
 #define TAG_WIFI_SCAN 8
 #define TAG_ACCELEROMETER 9
 #define TAG_CHARGE 10
+#define TAG_SENSORS 11
 
 /*!
  * \brief LoRaWAN stream application port

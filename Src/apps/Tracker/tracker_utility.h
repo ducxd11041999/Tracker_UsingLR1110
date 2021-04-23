@@ -45,6 +45,7 @@ extern "C" {
 #include "wifi_scan.h"
 #include "gnss_scan.h"
 #include "lr1110_modem_lorawan.h"
+#include "bmp280.h"
 /*
  * -----------------------------------------------------------------------------
  * --- PUBLIC MACROS -----------------------------------------------------------

@@ -21,25 +21,23 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
 Dialog DLL:      TCM.DLL V1.36.5.0
  
 <h2>Project:</h2>
-D:\RF_things\3.Project\MLR1110\LR1110_Code\lr1110_modem_application_example\MDK-ARM\lr1110_modem_application_example.uvprojx
-Project File Date:  04/02/2021
+D:\RF_things\3.Project\MLR1110\LR1110_Code\LR1110_Tracker\MDK-ARM\lr1110_modem_application_example.uvprojx
+Project File Date:  04/23/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Build target 'lr1110_modem_tracker_EU868'
+Build target 'lr1110_modem_tracker_US915'
 compiling main_tracker.c...
-..\Src\apps\Tracker\main_tracker.c(361): warning:  #550-D: variable "modem_response_code"  was set but never used
+..\Src\apps\Tracker\main_tracker.c(382): warning:  #550-D: variable "modem_response_code"  was set but never used
       lr1110_modem_response_code_t modem_response_code = LR1110_MODEM_RESPONSE_CODE_OK;
-..\Src\apps\Tracker\main_tracker.c(986): warning:  #550-D: variable "modem_response_code"  was set but never used
-      lr1110_modem_response_code_t modem_response_code = LR1110_MODEM_RESPONSE_CODE_OK;
-..\Src\apps\Tracker\main_tracker.c(951): warning:  #177-D: function "print_lorawan_keys"  was declared but never referenced
+..\Src\apps\Tracker\main_tracker.c(992): warning:  #177-D: function "print_lorawan_keys"  was declared but never referenced
   static void print_lorawan_keys( const uint8_t* dev_eui, const uint8_t* join_eui, const uint8_t* app_key, uint32_t pin )
-..\Src\apps\Tracker\main_tracker.c: 3 warnings, 0 errors
+..\Src\apps\Tracker\main_tracker.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=39136 RO-data=776 RW-data=988 ZI-data=6652  
+Program Size: Code=41296 RO-data=776 RW-data=1004 ZI-data=6964  
 FromELF: creating hex file...
 After Build - User command #1: C:\Keil_v5\\ARM\ARMCC\bin\fromelf.exe --bin --output=lr1110_modem_application_examples.bin lr1110_modem_application_examples\lr1110_modem_application_examples.axf
-"lr1110_modem_application_examples\lr1110_modem_application_examples.axf" - 0 Error(s), 3 Warning(s).
+"lr1110_modem_application_examples\lr1110_modem_application_examples.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -55,14 +53,14 @@ Package Vendor: Keil
                 STMicroelectronics STM32L4 Series Device Support, Drivers and Examples
 
 <h2>Collection of Component include folders:</h2>
-  .\RTE\_lr1110_modem_tracker_EU868
+  .\RTE\_lr1110_modem_tracker_US915
   C:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include
   C:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include
 
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.3.0
-Build Time Elapsed:  00:00:16
+Build Time Elapsed:  00:00:15
 </pre>
 </body>
 </html>

@@ -64,4 +64,4 @@ lr1110_modem_application_examples\external_supply.o: ..\Inc\boards\board-config.
 lr1110_modem_application_examples\external_supply.o: ../Drivers/BSP/Components/lis2de12/lis2de12.h
 lr1110_modem_application_examples\external_supply.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 lr1110_modem_application_examples\external_supply.o: ../Drivers/BSP/Components/Leds/leds.h
-lr1110_modem_application_examples\external_supply.o: ..\Drivers\BSP\Components\external_supply\external_supply.h
+lr1110_modem_application_examples\external_supply.o: ../Drivers/BSP/Components/external_supply/external_supply.h

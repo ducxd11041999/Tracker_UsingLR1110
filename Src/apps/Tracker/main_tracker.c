@@ -42,6 +42,7 @@
 #include "gnss_scan.h"
 #include "tracker_utility.h"
 
+
 /*
  * -----------------------------------------------------------------------------
  * --- PRIVATE MACROS-----------------------------------------------------------
@@ -51,6 +52,12 @@
  * -----------------------------------------------------------------------------
  * --- PRIVATE CONSTANTS -------------------------------------------------------
  */
+ 
+ /*!
+ * \brief Defines tx power,
+ * value in [dBm].
+ */
+ #define TX_POWER 10
 /*!
  * \brief Defines DEBUG MODE PRINT DATA SAVE POWER,
  * value in [ms].
@@ -96,7 +103,15 @@
  * -----------------------------------------------------------------------------
  * --- PRIVATE VARIABLES -------------------------------------------------------
  */
+/*!
+ * \brief Use BMP280 tracker pressure , humidity , temperature
+ */
+BMP280_HandleTypedef bmp280;
 
+float pressure, temperature, humidity;
+
+uint16_t size;
+uint8_t Data[256];
 /*!
  * \brief Tracker context structure
  */
@@ -348,6 +363,10 @@ static void tracker_run_gnss_scan( gnss_settings_t gnss_settings, uint8_t* nav_m
  */
 static void build_and_stream_payload( void );
 
+/*!
+ * \brief init bme
+ */
+static void bme280_init(void);
 /*
  * -----------------------------------------------------------------------------
  * --- PUBLIC FUNCTIONS DEFINITION ---------------------------------------------
@@ -356,6 +375,8 @@ static void build_and_stream_payload( void );
 /**
  * \brief Main application entry point.
  */
+
+
 int main( void )
 {
     lr1110_modem_response_code_t modem_response_code = LR1110_MODEM_RESPONSE_CODE_OK;
@@ -368,7 +389,8 @@ int main( void )
     /* Init board */
     hal_mcu_init( );
     hal_mcu_init_periph( );
-
+		/*bme280*/
+		bme280_init();
     /* Board is initialized */
     leds_blink( LED_ALL_MASK, 100, 2, true );
     
@@ -490,12 +512,11 @@ int main( void )
             {
                 /* Display used keys */
 								#if DEBUG_MODE_PRINT == 1
-                print_lorawan_keys( dev_eui, join_eui, app_key, tracker_ctx.lorawan_pin );
+								print_lorawan_keys( dev_eui, join_eui, app_key, tracker_ctx.lorawan_pin );
 								#endif
                 join_network();
-            
+								//join_network();
                 device_state = DEVICE_STATE_CYCLE;
-
                 break;
             }
             case DEVICE_COLLECT_DATA:
@@ -584,7 +605,7 @@ int main( void )
                     }
 										/*if scaned gps then pass to wifi*/
 										/*  WIFI SCAN */
-                    if( tracker_ctx.wifi_settings.enabled == true && tracker_ctx.nb_detected_satellites < 6)
+                    if( tracker_ctx.wifi_settings.enabled == true && tracker_ctx.nb_detected_satellites < 3)
                     {
                         tracker_run_wifi_scan( tracker_ctx.wifi_settings, &tracker_ctx.wifi_result );
                     }
@@ -612,6 +633,17 @@ int main( void )
 										#if DEBUG_MODE_PRINT == 1
                     HAL_DBG_TRACE_PRINTF( "Temperature : %d *C\r\n", tracker_ctx.tout/100 );
 										#endif
+										/* Read data bme*/
+										bmp280_read_float(&bmp280, &temperature, &pressure, &humidity);
+										
+										#if DEBUG_MODE_PRINT == 1
+                    HAL_DBG_TRACE_PRINTF( "Read data BME : %d *C\r\n");\
+										HAL_DBG_TRACE_PRINTF( "bme : X=%4.2f  | Y=%4.2f  | Z=%4.2f  \r\n",
+                                          ( double )temperature,
+                                          ( double ) pressure,
+                                          ( double ) humidity );
+										#endif
+										
 #endif							
                     /* Modem charge */
                     lr1110_modem_get_charge( &lr1110, &tracker_ctx.charge );
@@ -878,6 +910,12 @@ static void build_and_stream_payload( void )
     add_payload_in_streaming_fifo( tracker_ctx.lorawan_payload, tracker_ctx.lorawan_payload_len );
 
     tracker_ctx.lorawan_payload_len = 0;  // reset the payload len
+		
+		/*Add data collect sensors*/
+		tracker_ctx.lorawan_payload[tracker_ctx.lorawan_payload_len++] = TAG_SENSORS;
+		tracker_ctx.lorawan_payload[tracker_ctx.lorawan_payload_len++] = 	0;
+		add_payload_in_streaming_fifo( tracker_ctx.lorawan_payload, tracker_ctx.lorawan_payload_len );
+    tracker_ctx.lorawan_payload_len = 0;  // reset the payload len
 }
 
 static lr1110_modem_response_code_t lorawan_init( void )
@@ -891,13 +929,15 @@ static lr1110_modem_response_code_t lorawan_init( void )
 				#if DEBUG_MODE_PRINT == 1
         HAL_DBG_TRACE_MSG( "REGION      : EU868\r\n\r\n" );
 				#endif
-        modem_response_code |= lr1110_modem_set_region( &lr1110, LR1110_LORAWAN_REGION_EU868 );
-    
+				modem_response_code |= lr1110_modem_set_region( &lr1110, LR1110_LORAWAN_REGION_EU868 );
         modem_response_code |= lr1110_modem_activate_duty_cycle( &lr1110, LORAWAN_DUTYCYCLE_ON);
+				/**====== SET TX POWER ====*/
+				lr1110_modem_board_set_rf_tx_power_offset(&lr1110, TX_POWER);
 #endif
 #if defined( USE_REGION_US915 )
         HAL_DBG_TRACE_MSG( "REGION      : US915\r\n\r\n" );
         modem_response_code |= lr1110_modem_set_region( &lr1110, LR1110_LORAWAN_REGION_US915 );
+			//	modem_response_code |= lr1110_modem_activate_duty_cycle( &lr1110, LORAWAN_DUTYCYCLE_ON);
 #endif
 
     /* Set DM info field */
@@ -905,6 +945,7 @@ static lr1110_modem_response_code_t lorawan_init( void )
     dm_info_fields.dm_info_field[1] = LR1110_MODEM_DM_INFO_TYPE_GNSS_ALMANAC_STATUS;
     dm_info_fields.dm_info_field[2] = LR1110_MODEM_DM_INFO_TYPE_TEMPERATURE;
     dm_info_fields.dm_info_length   = 3;
+		
 
     modem_response_code |= lr1110_modem_set_dm_info_field( &lr1110, &dm_info_fields );
 
@@ -987,7 +1028,6 @@ static void join_network( void )
 
     /* Starts the join procedure */
     modem_response_code = lr1110_modem_join( &lr1110 );
-		#if DEBUG_MODE_PRINT == 1
     if( modem_response_code == LR1110_MODEM_RESPONSE_CODE_OK )
     {
         HAL_DBG_TRACE_INFO( "###### ===== JOINING ==== ######\r\n\r\n" );
@@ -996,7 +1036,6 @@ static void join_network( void )
     {
         HAL_DBG_TRACE_ERROR( "###### ===== JOINING CMD ERROR ==== ######\r\n\r\n" );
     }
-		#endif
 }
 
 static bool add_payload_in_streaming_fifo( uint8_t* payload, uint16_t len )
@@ -1279,6 +1318,15 @@ static void parse_frame( uint8_t port, const uint8_t* payload, uint8_t size )
     default:
         break;
     }
+}
+static void bme280_init(void)
+{
+		bmp280_init_default_params(&bmp280.params);
+		bmp280.addr = BMP280_I2C_ADDRESS_0;
+		if (!bmp280_init(&bmp280, &bmp280.params)) {
+			HAL_DBG_TRACE_ERROR( "###### ===== BME INIT ERROR ==== ######\r\n\r\n" );
+			HAL_Delay(500);
+		}
 }
 
 /* --- EOF ------------------------------------------------------------------ */

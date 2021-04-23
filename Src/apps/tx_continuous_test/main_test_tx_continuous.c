@@ -51,7 +51,7 @@
  */
  #define TX_MODULATED true
 
-/******-
+/*
  * -----------------------------------------------------------------------------
  * --- PRIVATE TYPES -----------------------------------------------------------
  */
@@ -91,11 +91,13 @@ int main( void )
     lr1110_modem_event_t                  lr1110_modem_event;
     lr1110_modem_version_t                modem;
     lr1110_modem_response_code_t modem_response_code = LR1110_MODEM_RESPONSE_CODE_OK;
+		uint32_t*   rx_packet_counter;
+		int8_t* rssi_test;
 
     // Init board
-			hal_mcu_init( );
+    hal_mcu_init( );
 
-			hal_mcu_init_periph( );
+    hal_mcu_init_periph( );
 
     // Init LR1110 modem event
     lr1110_modem_event.reset = lr1110_modem_reset_event;
@@ -110,22 +112,23 @@ int main( void )
     HAL_DBG_TRACE_PRINTF( "FIRMWARE    : %#02X\r\n", modem.firmware );
     HAL_DBG_TRACE_PRINTF( "BOOTLOADER  : %#02X\r\n\r\n", modem.bootloader );
     
-    modem_response_code = lr1110_modem_set_region( &lr1110, LR1110_LORAWAN_REGION_US915 );
+    modem_response_code = lr1110_modem_set_region( &lr1110, LR1110_LORAWAN_REGION_EU868 );
+
     modem_response_code = lr1110_modem_test_mode_start( &lr1110 );
 		
 #if( TX_MODULATED )
-		modem_response_code = lr1110_modem_test_tx_cont( &lr1110, 868000000, 5, LR1110_MODEM_TST_MODE_SF7,
+    modem_response_code = lr1110_modem_test_tx_cont( &lr1110, 868000000, 0, LR1110_MODEM_TST_MODE_SF7,
                                                      LR1110_MODEM_TST_MODE_125_KHZ, LR1110_MODEM_TST_MODE_4_5, 51
-                                                     );
+                                                     );																									
 #else
-    modem_response_code = lr1110_modem_test_tx_cw( &lr1110, 922000000, 22 );
+    modem_response_code = lr1110_modem_test_tx_cw( &lr1110, 902300000, 22 );
 #endif
-   while( 1 )
+
+    while( 1 )
     {
-				lr1110_modem_event_process( &lr1110 );
-				//lr1110_radio_set_tx(&lr1110, 1000);
+        lr1110_modem_event_process( &lr1110 );
     }
-} 
+}
 
 /*
  * -----------------------------------------------------------------------------

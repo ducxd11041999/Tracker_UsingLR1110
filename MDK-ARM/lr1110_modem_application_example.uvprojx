@@ -893,6 +893,11 @@
               <FileType>1</FileType>
               <FilePath>..\Drivers\BSP\Components\external_supply\external_supply.c</FilePath>
             </File>
+            <File>
+              <FileName>bmp280.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\BSP\Components\BME280\bmp280.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1382,7 +1387,7 @@
               <MiscControls>--gnu</MiscControls>
               <Define>USE_FULL_LL_DRIVER,STM32L476xx,USE_MODEM_LORA,LR1110EVK, USE_REGION_US915</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../Drivers/BSP/Components/lis2de12/;..\Inc\boards;..\Inc\system;..\Src\radio\lr1110_modem\src;..\Src\radio;..\Drivers\EEPROM_Emul\Core;..\Drivers\EEPROM_Emul\Porting\STM32L4;..\Src\apps\update-firmware;..\Src\radio\lr1110_trx;../Drivers/BSP/Components/Leds;..\Inc\smtc_hal;..\Src\radio\wifi;..\Src\radio\gnss;../Drivers/BSP/Components/external_supply;../Drivers/BSP/Components/lis2de12</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../Drivers/BSP/Components/lis2de12/;..\Inc\boards;..\Inc\system;..\Src\radio\lr1110_modem\src;..\Src\radio;..\Drivers\EEPROM_Emul\Core;..\Drivers\EEPROM_Emul\Porting\STM32L4;..\Src\apps\update-firmware;..\Src\radio\lr1110_trx;../Drivers/BSP/Components/Leds;..\Inc\smtc_hal;..\Src\radio\wifi;..\Src\radio\gnss;../Drivers/BSP/Components/external_supply;../Drivers/BSP/Components/lis2de12;../Drivers/BSP/Component/BME280</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1936,6 +1941,11 @@
               <FileName>external_supply.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\BSP\Components\external_supply\external_supply.c</FilePath>
+            </File>
+            <File>
+              <FileName>bmp280.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\BSP\Components\BME280\bmp280.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -3050,6 +3060,11 @@
               <FileType>1</FileType>
               <FilePath>..\Drivers\BSP\Components\external_supply\external_supply.c</FilePath>
             </File>
+            <File>
+              <FileName>bmp280.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\BSP\Components\BME280\bmp280.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -4163,6 +4178,11 @@
               <FileType>1</FileType>
               <FilePath>..\Drivers\BSP\Components\external_supply\external_supply.c</FilePath>
             </File>
+            <File>
+              <FileName>bmp280.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\BSP\Components\BME280\bmp280.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -5206,6 +5226,11 @@
               <FileName>external_supply.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\BSP\Components\external_supply\external_supply.c</FilePath>
+            </File>
+            <File>
+              <FileName>bmp280.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\BSP\Components\BME280\bmp280.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -6268,6 +6293,11 @@
               <FileName>external_supply.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\BSP\Components\external_supply\external_supply.c</FilePath>
+            </File>
+            <File>
+              <FileName>bmp280.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\BSP\Components\BME280\bmp280.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -7382,6 +7412,11 @@
               <FileType>1</FileType>
               <FilePath>..\Drivers\BSP\Components\external_supply\external_supply.c</FilePath>
             </File>
+            <File>
+              <FileName>bmp280.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\BSP\Components\BME280\bmp280.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -8425,6 +8460,11 @@
               <FileName>external_supply.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\BSP\Components\external_supply\external_supply.c</FilePath>
+            </File>
+            <File>
+              <FileName>bmp280.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\BSP\Components\BME280\bmp280.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -9539,6 +9579,11 @@
               <FileType>1</FileType>
               <FilePath>..\Drivers\BSP\Components\external_supply\external_supply.c</FilePath>
             </File>
+            <File>
+              <FileName>bmp280.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\BSP\Components\BME280\bmp280.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -10651,6 +10696,11 @@
               <FileName>external_supply.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\BSP\Components\external_supply\external_supply.c</FilePath>
+            </File>
+            <File>
+              <FileName>bmp280.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\BSP\Components\BME280\bmp280.c</FilePath>
             </File>
           </Files>
         </Group>

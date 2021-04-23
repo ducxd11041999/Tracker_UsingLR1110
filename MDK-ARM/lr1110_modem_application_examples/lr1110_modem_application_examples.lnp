@@ -31,6 +31,7 @@
 "lr1110_modem_application_examples\lis2de12.o"
 "lr1110_modem_application_examples\leds.o"
 "lr1110_modem_application_examples\external_supply.o"
+"lr1110_modem_application_examples\bmp280.o"
 "lr1110_modem_application_examples\tracker_utility.o"
 "lr1110_modem_application_examples\wifi_scan.o"
 "lr1110_modem_application_examples\gnss_scan.o"

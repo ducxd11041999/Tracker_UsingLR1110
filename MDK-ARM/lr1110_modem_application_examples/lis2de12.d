@@ -67,7 +67,7 @@ lr1110_modem_application_examples\lis2de12.o: ..\Inc\boards\utilities.h
 lr1110_modem_application_examples\lis2de12.o: ..\Inc\smtc_hal\smtc_hal_i2c.h
 lr1110_modem_application_examples\lis2de12.o: ..\Inc\boards\board-config.h
 lr1110_modem_application_examples\lis2de12.o: ../Drivers/BSP/Components/Leds/leds.h
-lr1110_modem_application_examples\lis2de12.o: ..\Drivers\BSP\Components\external_supply\external_supply.h
+lr1110_modem_application_examples\lis2de12.o: ../Drivers/BSP/Components/external_supply/external_supply.h
 lr1110_modem_application_examples\lis2de12.o: ..\Src\radio\lr1110.h
 lr1110_modem_application_examples\lis2de12.o: ..\Src\radio\lr1110_modem\src\lr1110_bootloader.h
 lr1110_modem_application_examples\lis2de12.o: ..\Src\radio\lr1110_modem\src\lr1110_bootloader_types.h

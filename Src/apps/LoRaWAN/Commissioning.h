@@ -108,7 +108,7 @@ extern "C" {
 /*!
  * \brief Use or not the Semtech join server
  */
-#define USE_SEMTECH_JOIN_SERVER false
+#define USE_SEMTECH_JOIN_SERVER true
 
 /*
  * -----------------------------------------------------------------------------

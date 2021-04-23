@@ -67,7 +67,7 @@ lr1110_modem_application_examples\tracker_utility.o: ..\Inc\boards\board-config.
 lr1110_modem_application_examples\tracker_utility.o: ../Drivers/BSP/Components/lis2de12/lis2de12.h
 lr1110_modem_application_examples\tracker_utility.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 lr1110_modem_application_examples\tracker_utility.o: ../Drivers/BSP/Components/Leds/leds.h
-lr1110_modem_application_examples\tracker_utility.o: ..\Drivers\BSP\Components\external_supply\external_supply.h
+lr1110_modem_application_examples\tracker_utility.o: ../Drivers/BSP/Components/external_supply/external_supply.h
 lr1110_modem_application_examples\tracker_utility.o: ..\Src\radio\lr1110.h
 lr1110_modem_application_examples\tracker_utility.o: ..\Src\radio\lr1110_modem\src\lr1110_bootloader.h
 lr1110_modem_application_examples\tracker_utility.o: ..\Src\radio\lr1110_modem\src\lr1110_bootloader_types.h
@@ -85,4 +85,5 @@ lr1110_modem_application_examples\tracker_utility.o: ..\Src\radio\lr1110_modem\s
 lr1110_modem_application_examples\tracker_utility.o: ..\Src\apps\Tracker\tracker_utility.h
 lr1110_modem_application_examples\tracker_utility.o: ..\Src\radio\wifi\wifi_scan.h
 lr1110_modem_application_examples\tracker_utility.o: ..\Src\radio\gnss\gnss_scan.h
+lr1110_modem_application_examples\tracker_utility.o: ..\Src\apps\Tracker\bmp280.h
 lr1110_modem_application_examples\tracker_utility.o: ..\Src\apps\Tracker\main_tracker.h
