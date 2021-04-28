@@ -390,7 +390,7 @@ int main( void )
     hal_mcu_init( );
     hal_mcu_init_periph( );
 		/*bme280*/
-		bme280_init();
+		//bme280_init();
     /* Board is initialized */
     leds_blink( LED_ALL_MASK, 100, 2, true );
     
@@ -605,7 +605,7 @@ int main( void )
                     }
 										/*if scaned gps then pass to wifi*/
 										/*  WIFI SCAN */
-                    if( tracker_ctx.wifi_settings.enabled == true && tracker_ctx.nb_detected_satellites < 3)
+                    if( tracker_ctx.wifi_settings.enabled == true && tracker_ctx.nb_detected_satellites < 4)
                     {
                         tracker_run_wifi_scan( tracker_ctx.wifi_settings, &tracker_ctx.wifi_result );
                     }
@@ -631,7 +631,7 @@ int main( void )
                     /* Temperature */
                     tracker_ctx.tout = acc_get_temperature( );
 										#if DEBUG_MODE_PRINT == 1
-                    HAL_DBG_TRACE_PRINTF( "Temperature : %d *C\r\n", tracker_ctx.tout/100 );
+                    HAL_DBG_TRACE_PRINTF( "Temperature : %d *C\r\n", tracker_ctx.tout/1000 );
 										#endif
 										/* Read data bme*/
 										bmp280_read_float(&bmp280, &temperature, &pressure, &humidity);

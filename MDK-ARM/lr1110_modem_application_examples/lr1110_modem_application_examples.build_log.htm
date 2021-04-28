@@ -32,12 +32,14 @@ compiling main_tracker.c...
       lr1110_modem_response_code_t modem_response_code = LR1110_MODEM_RESPONSE_CODE_OK;
 ..\Src\apps\Tracker\main_tracker.c(992): warning:  #177-D: function "print_lorawan_keys"  was declared but never referenced
   static void print_lorawan_keys( const uint8_t* dev_eui, const uint8_t* join_eui, const uint8_t* app_key, uint32_t pin )
-..\Src\apps\Tracker\main_tracker.c: 2 warnings, 0 errors
+..\Src\apps\Tracker\main_tracker.c(1322): warning:  #177-D: function "bme280_init"  was declared but never referenced
+  static void bme280_init(void)
+..\Src\apps\Tracker\main_tracker.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=41296 RO-data=776 RW-data=1004 ZI-data=6964  
+Program Size: Code=40304 RO-data=776 RW-data=1004 ZI-data=6964  
 FromELF: creating hex file...
 After Build - User command #1: C:\Keil_v5\\ARM\ARMCC\bin\fromelf.exe --bin --output=lr1110_modem_application_examples.bin lr1110_modem_application_examples\lr1110_modem_application_examples.axf
-"lr1110_modem_application_examples\lr1110_modem_application_examples.axf" - 0 Error(s), 2 Warning(s).
+"lr1110_modem_application_examples\lr1110_modem_application_examples.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -60,7 +62,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.3.0
-Build Time Elapsed:  00:00:15
+Build Time Elapsed:  00:00:19
 </pre>
 </body>
 </html>

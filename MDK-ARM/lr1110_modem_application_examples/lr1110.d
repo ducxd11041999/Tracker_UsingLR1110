@@ -65,7 +65,7 @@ lr1110_modem_application_examples\lr1110.o: ..\Inc\boards\board-config.h
 lr1110_modem_application_examples\lr1110.o: ../Drivers/BSP/Components/lis2de12/lis2de12.h
 lr1110_modem_application_examples\lr1110.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 lr1110_modem_application_examples\lr1110.o: ../Drivers/BSP/Components/Leds/leds.h
-lr1110_modem_application_examples\lr1110.o: ../Drivers/BSP/Components/external_supply/external_supply.h
+lr1110_modem_application_examples\lr1110.o: ..\Drivers\BSP\Components\external_supply\external_supply.h
 lr1110_modem_application_examples\lr1110.o: ..\Src\radio\lr1110_modem\src\lr1110_bootloader.h
 lr1110_modem_application_examples\lr1110.o: ..\Src\radio\lr1110_modem\src\lr1110_bootloader_types.h
 lr1110_modem_application_examples\lr1110.o: ..\Src\radio\lr1110_modem\src\lr1110_types.h

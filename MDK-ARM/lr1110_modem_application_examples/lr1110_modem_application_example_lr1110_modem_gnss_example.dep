@@ -1,10 +1,10 @@
 Dependencies for Project 'lr1110_modem_application_example', Target 'lr1110_modem_gnss_example': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
 F (startup_stm32l476xx.s)(0x600D03B2)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_lr1110_modem_gnss_example-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include--pd "__UVISION_VERSION SETA 529" --pd "_RTE_ SETA 1" --pd "STM32L476xx SETA 1"--list startup_stm32l476xx.lst --xref -o lr1110_modem_application_examples\startup_stm32l476xx.o --depend lr1110_modem_application_examples\startup_stm32l476xx.d)
-F (..\Src\apps\LoRaWAN\main_lorawan.c)(0x604C260B)()
+F (..\Src\apps\LoRaWAN\main_lorawan.c)(0x60795BD9)()
 F (..\Src\apps\update-firmware\update_firmware.c)(0x600D03B2)()
 F (..\Src\apps\wifi_test\main_test_wifi.c)(0x600D03B2)()
-F (..\Src\apps\gnss_test\main_test_gnss.c)(0x606E9F47)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ..\Drivers\BSP\Components\external_supply --gnu-I.\RTE\_lr1110_modem_gnss_example-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_EU868-o lr1110_modem_application_examples\main_test_gnss.o --omf_browse lr1110_modem_application_examples\main_test_gnss.crf --depend lr1110_modem_application_examples\main_test_gnss.d)
+F (..\Src\apps\gnss_test\main_test_gnss.c)(0x6084D7EA)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ..\Drivers\BSP\Components\external_supply --gnu-I.\RTE\_lr1110_modem_gnss_example-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_EU868-o lr1110_modem_application_examples\main_test_gnss.o --omf_browse lr1110_modem_application_examples\main_test_gnss.crf --depend lr1110_modem_application_examples\main_test_gnss.d)
 I (..\Src\radio\gnss\gnss_scan.h)(0x600D03B2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AE028)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_gnss.h)(0x600D03B2)
@@ -73,7 +73,7 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_spi.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_uart.h)(0x600D03B2)
 I (..\Inc\boards\utilities.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_i2c.h)(0x600D03B2)
-I (..\Inc\boards\board-config.h)(0x600D03B2)
+I (..\Inc\boards\board-config.h)(0x60812BE2)
 I (../Drivers/BSP/Components/lis2de12/lis2de12.h)(0x600D03B1)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5D9AE022)
 I (../Drivers/BSP/Components/Leds/leds.h)(0x600D03B1)
@@ -84,13 +84,13 @@ I (..\Src\radio\lr1110_modem\src\lr1110_bootloader_types.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_types.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_hal.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_hal.h)(0x600D03B2)
-I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x600D03B2)
+I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x607D97F9)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_wifi.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_radio.h)(0x600E3626)
 I (..\Src\radio\lr1110_modem\src\lr1110_radio_types.h)(0x600E2E5D)
 I (..\Src\radio\lr1110_modem\src\lr1110_regmem.h)(0x600E2E5D)
-F (..\Src\apps\Tracker\main_tracker.c)(0x606D79C0)()
-F (..\Src\apps\tx_continuous_test\main_test_tx_continuous.c)(0x606E9C5F)()
+F (..\Src\apps\Tracker\main_tracker.c)(0x6084D705)()
+F (..\Src\apps\tx_continuous_test\main_test_tx_continuous.c)(0x6076618A)()
 F (..\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_i2c.c)(0x600D03B2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ..\Drivers\BSP\Components\external_supply --gnu-I.\RTE\_lr1110_modem_gnss_example-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_EU868-o lr1110_modem_application_examples\stm32l4xx_hal_i2c.o --omf_browse lr1110_modem_application_examples\stm32l4xx_hal_i2c.crf --depend lr1110_modem_application_examples\stm32l4xx_hal_i2c.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x600D03B2)
 I (../Inc/stm32l4xx_hal_conf.h)(0x600D03B2)
@@ -1248,9 +1248,9 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_spi.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_uart.h)(0x600D03B2)
 I (..\Inc\boards\utilities.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_i2c.h)(0x600D03B2)
-I (..\Inc\boards\board-config.h)(0x600D03B2)
+I (..\Inc\boards\board-config.h)(0x60812BE2)
 I (../Drivers/BSP/Components/Leds/leds.h)(0x600D03B1)
-I (..\Drivers\BSP\Components\external_supply\external_supply.h)(0x600D03B1)
+I (../Drivers/BSP/Components/external_supply/external_supply.h)(0x600D03B1)
 I (..\Src\radio\lr1110.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_bootloader.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_bootloader_types.h)(0x600D03B2)
@@ -1259,7 +1259,7 @@ I (..\Src\radio\lr1110_modem\src\lr1110_modem_common.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_hal.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_hal.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_gnss.h)(0x600D03B2)
-I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x600D03B2)
+I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x607D97F9)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_system.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_wifi.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_radio.h)(0x600E3626)
@@ -1327,12 +1327,12 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_spi.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_uart.h)(0x600D03B2)
 I (..\Inc\boards\utilities.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_i2c.h)(0x600D03B2)
-I (..\Inc\boards\board-config.h)(0x600D03B2)
+I (..\Inc\boards\board-config.h)(0x60812BE2)
 I (../Drivers/BSP/Components/lis2de12/lis2de12.h)(0x600D03B1)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5D9AE022)
 I (../Drivers/BSP/Components/Leds/leds.h)(0x600D03B1)
-I (..\Drivers\BSP\Components\external_supply\external_supply.h)(0x600D03B1)
-F (..\Drivers\BSP\Components\external_supply\external_supply.c)(0x600D03B1)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ..\Drivers\BSP\Components\external_supply --gnu-I.\RTE\_lr1110_modem_gnss_example-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_EU868-o lr1110_modem_application_examples\external_supply.o --omf_browse lr1110_modem_application_examples\external_supply.crf --depend lr1110_modem_application_examples\external_supply.d)
+I (../Drivers/BSP/Components/external_supply/external_supply.h)(0x600D03B1)
+F (..\Drivers\BSP\Components\external_supply\external_supply.c)(0x607D9C1C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ..\Drivers\BSP\Components\external_supply --gnu-I.\RTE\_lr1110_modem_gnss_example-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_EU868-o lr1110_modem_application_examples\external_supply.o --omf_browse lr1110_modem_application_examples\external_supply.crf --depend lr1110_modem_application_examples\external_supply.d)
 I (..\Inc\smtc_hal\smtc_hal.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_options.h)(0x600D03B2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AE028)
@@ -1394,12 +1394,80 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_spi.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_uart.h)(0x600D03B2)
 I (..\Inc\boards\utilities.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_i2c.h)(0x600D03B2)
-I (..\Inc\boards\board-config.h)(0x600D03B2)
+I (..\Inc\boards\board-config.h)(0x60812BE2)
 I (../Drivers/BSP/Components/lis2de12/lis2de12.h)(0x600D03B1)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5D9AE022)
 I (../Drivers/BSP/Components/Leds/leds.h)(0x600D03B1)
-I (..\Drivers\BSP\Components\external_supply\external_supply.h)(0x600D03B1)
-F (..\Src\apps\Tracker\tracker_utility.c)(0x606AD5B3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ..\Drivers\BSP\Components\external_supply --gnu-I.\RTE\_lr1110_modem_gnss_example-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_EU868-o lr1110_modem_application_examples\tracker_utility.o --omf_browse lr1110_modem_application_examples\tracker_utility.crf --depend lr1110_modem_application_examples\tracker_utility.d)
+I (../Drivers/BSP/Components/external_supply/external_supply.h)(0x600D03B1)
+F (..\Drivers\BSP\Components\BME280\bmp280.c)(0x5A6DE9C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ..\Drivers\BSP\Components\external_supply --gnu-I.\RTE\_lr1110_modem_gnss_example-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_EU868-o lr1110_modem_application_examples\bmp280.o --omf_browse lr1110_modem_application_examples\bmp280.crf --depend lr1110_modem_application_examples\bmp280.d)
+I (..\Drivers\BSP\Components\BME280\bmp280.h)(0x60822D5A)
+I (..\Inc\smtc_hal\smtc_hal.h)(0x600D03B2)
+I (..\Inc\smtc_hal\smtc_hal_options.h)(0x600D03B2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AE028)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9AE028)
+I (..\Inc\smtc_hal\smtc_hal_dbg_trace.h)(0x600D03B2)
+I (..\Inc\smtc_hal\smtc_hal_mcu.h)(0x600D03B2)
+I (..\Inc\smtc_hal\smtc_hal_gpio.h)(0x600D03B2)
+I (..\Inc\smtc_hal\smtc_hal_gpio_pin_names.h)(0x600D03B2)
+I (..\Inc\smtc_hal\smtc_hal_rtc.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x600D03B2)
+I (../Inc/stm32l4xx_hal_conf.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x600D03B2)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x600D03B1)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h)(0x600D03B1)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x600D03B2)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x600D03B2)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x600D03B2)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x600D03B2)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x600D03B2)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h)(0x600D03B1)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x600D03B2)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AE028)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_exti.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio_ex.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma_ex.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_adc.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_adc.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_adc_ex.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ex.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ramfunc.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_iwdg.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_lptim.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rng.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc_ex.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_rtc.h)(0x600D03B2)
+I (..\Inc\smtc_hal\smtc_hal_tmr.h)(0x600D03B2)
+I (..\Inc\smtc_hal\smtc_hal_tmr_list.h)(0x600D03B2)
+I (..\Inc\smtc_hal\smtc_hal_watchdog.h)(0x600D03B2)
+I (..\Inc\smtc_hal\smtc_hal_rng.h)(0x600D03B2)
+I (..\Inc\smtc_hal\smtc_hal_spi.h)(0x600D03B2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_spi.h)(0x600D03B2)
+I (..\Inc\smtc_hal\smtc_hal_uart.h)(0x600D03B2)
+I (..\Inc\boards\utilities.h)(0x600D03B2)
+I (..\Inc\smtc_hal\smtc_hal_i2c.h)(0x600D03B2)
+I (..\Inc\boards\board-config.h)(0x60812BE2)
+I (../Drivers/BSP/Components/lis2de12/lis2de12.h)(0x600D03B1)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5D9AE022)
+I (../Drivers/BSP/Components/Leds/leds.h)(0x600D03B1)
+I (../Drivers/BSP/Components/external_supply/external_supply.h)(0x600D03B1)
+F (..\Src\apps\Tracker\tracker_utility.c)(0x6084D6D5)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ..\Drivers\BSP\Components\external_supply --gnu-I.\RTE\_lr1110_modem_gnss_example-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_EU868-o lr1110_modem_application_examples\tracker_utility.o --omf_browse lr1110_modem_application_examples\tracker_utility.crf --depend lr1110_modem_application_examples\tracker_utility.d)
 I (..\Inc\boards\lr1110-modem-board.h)(0x6010F410)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AE028)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AE02A)
@@ -1464,7 +1532,7 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_spi.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_uart.h)(0x600D03B2)
 I (..\Inc\boards\utilities.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_i2c.h)(0x600D03B2)
-I (..\Inc\boards\board-config.h)(0x600D03B2)
+I (..\Inc\boards\board-config.h)(0x60812BE2)
 I (../Drivers/BSP/Components/lis2de12/lis2de12.h)(0x600D03B1)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5D9AE022)
 I (../Drivers/BSP/Components/Leds/leds.h)(0x600D03B1)
@@ -1477,16 +1545,17 @@ I (..\Src\radio\lr1110_modem\src\lr1110_modem_common.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_hal.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_hal.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_gnss.h)(0x600D03B2)
-I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x600D03B2)
+I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x607D97F9)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_system.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_wifi.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_radio.h)(0x600E3626)
 I (..\Src\radio\lr1110_modem\src\lr1110_radio_types.h)(0x600E2E5D)
 I (..\Src\radio\lr1110_modem\src\lr1110_regmem.h)(0x600E2E5D)
-I (..\Src\apps\Tracker\tracker_utility.h)(0x600D03B2)
+I (..\Src\apps\Tracker\tracker_utility.h)(0x60822F46)
 I (..\Src\radio\wifi\wifi_scan.h)(0x600D03B2)
 I (..\Src\radio\gnss\gnss_scan.h)(0x600D03B2)
-I (..\Src\apps\Tracker\main_tracker.h)(0x606D7533)
+I (..\Src\apps\Tracker\bmp280.h)(0x60822D5A)
+I (..\Src\apps\Tracker\main_tracker.h)(0x60840EBA)
 F (..\Src\radio\wifi\wifi_scan.c)(0x605F27BD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ..\Drivers\BSP\Components\external_supply --gnu-I.\RTE\_lr1110_modem_gnss_example-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_EU868-o lr1110_modem_application_examples\wifi_scan.o --omf_browse lr1110_modem_application_examples\wifi_scan.crf --depend lr1110_modem_application_examples\wifi_scan.d)
 I (..\Src\radio\wifi\wifi_scan.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_wifi.h)(0x600D03B2)
@@ -1556,11 +1625,11 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_spi.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_uart.h)(0x600D03B2)
 I (..\Inc\boards\utilities.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_i2c.h)(0x600D03B2)
-I (..\Inc\boards\board-config.h)(0x600D03B2)
+I (..\Inc\boards\board-config.h)(0x60812BE2)
 I (../Drivers/BSP/Components/lis2de12/lis2de12.h)(0x600D03B1)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5D9AE022)
 I (../Drivers/BSP/Components/Leds/leds.h)(0x600D03B1)
-I (..\Drivers\BSP\Components\external_supply\external_supply.h)(0x600D03B1)
+I (../Drivers/BSP/Components/external_supply/external_supply.h)(0x600D03B1)
 I (..\Src\radio\lr1110.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_bootloader.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_bootloader_types.h)(0x600D03B2)
@@ -1568,7 +1637,7 @@ I (..\Src\radio\lr1110_modem\src\lr1110_types.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_hal.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_hal.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_gnss.h)(0x600D03B2)
-I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x600D03B2)
+I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x607D97F9)
 I (..\Src\radio\lr1110_modem\src\lr1110_radio.h)(0x600E3626)
 I (..\Src\radio\lr1110_modem\src\lr1110_radio_types.h)(0x600E2E5D)
 I (..\Src\radio\lr1110_modem\src\lr1110_regmem.h)(0x600E2E5D)
@@ -1641,18 +1710,18 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_spi.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_uart.h)(0x600D03B2)
 I (..\Inc\boards\utilities.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_i2c.h)(0x600D03B2)
-I (..\Inc\boards\board-config.h)(0x600D03B2)
+I (..\Inc\boards\board-config.h)(0x60812BE2)
 I (../Drivers/BSP/Components/lis2de12/lis2de12.h)(0x600D03B1)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5D9AE022)
 I (../Drivers/BSP/Components/Leds/leds.h)(0x600D03B1)
-I (..\Drivers\BSP\Components\external_supply\external_supply.h)(0x600D03B1)
+I (../Drivers/BSP/Components/external_supply/external_supply.h)(0x600D03B1)
 I (..\Src\radio\lr1110.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_bootloader.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_bootloader_types.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_types.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_hal.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_hal.h)(0x600D03B2)
-I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x600D03B2)
+I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x607D97F9)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_wifi.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_radio.h)(0x600E3626)
 I (..\Src\radio\lr1110_modem\src\lr1110_radio_types.h)(0x600E2E5D)
@@ -1720,11 +1789,11 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_spi.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_uart.h)(0x600D03B2)
 I (..\Inc\boards\utilities.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_i2c.h)(0x600D03B2)
-I (..\Inc\boards\board-config.h)(0x600D03B2)
+I (..\Inc\boards\board-config.h)(0x60812BE2)
 I (../Drivers/BSP/Components/lis2de12/lis2de12.h)(0x600D03B1)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5D9AE022)
 I (../Drivers/BSP/Components/Leds/leds.h)(0x600D03B1)
-I (..\Drivers\BSP\Components\external_supply\external_supply.h)(0x600D03B1)
+I (../Drivers/BSP/Components/external_supply/external_supply.h)(0x600D03B1)
 I (..\Src\radio\lr1110_modem\src\lr1110_bootloader.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_bootloader_types.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_types.h)(0x600D03B2)
@@ -1732,7 +1801,7 @@ I (..\Src\radio\lr1110_modem\src\lr1110_modem_common.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_hal.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_hal.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_gnss.h)(0x600D03B2)
-I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x600D03B2)
+I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x607D97F9)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_system.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_wifi.h)(0x600D03B2)
 I (..\Inc\boards\lr1110-modem-board.h)(0x6010F410)
@@ -1811,17 +1880,17 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_spi.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_uart.h)(0x600D03B2)
 I (..\Inc\boards\utilities.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_i2c.h)(0x600D03B2)
-I (..\Inc\boards\board-config.h)(0x600D03B2)
+I (..\Inc\boards\board-config.h)(0x60812BE2)
 I (../Drivers/BSP/Components/lis2de12/lis2de12.h)(0x600D03B1)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5D9AE022)
 I (../Drivers/BSP/Components/Leds/leds.h)(0x600D03B1)
-I (..\Drivers\BSP\Components\external_supply\external_supply.h)(0x600D03B1)
+I (../Drivers/BSP/Components/external_supply/external_supply.h)(0x600D03B1)
 I (..\Src\radio\lr1110.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_bootloader.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_bootloader_types.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_types.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_gnss.h)(0x600D03B2)
-I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x600D03B2)
+I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x607D97F9)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_wifi.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_radio.h)(0x600E3626)
 I (..\Src\radio\lr1110_modem\src\lr1110_radio_types.h)(0x600E2E5D)
@@ -1839,8 +1908,8 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9AE028)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AE028)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_common.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_hal.h)(0x600D03B2)
-F (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.c)(0x60152340)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ..\Drivers\BSP\Components\external_supply --gnu-I.\RTE\_lr1110_modem_gnss_example-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_EU868-o lr1110_modem_application_examples\lr1110_modem_lorawan.o --omf_browse lr1110_modem_application_examples\lr1110_modem_lorawan.crf --depend lr1110_modem_application_examples\lr1110_modem_lorawan.d)
-I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x600D03B2)
+F (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.c)(0x607BD1D7)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ..\Drivers\BSP\Components\external_supply --gnu-I.\RTE\_lr1110_modem_gnss_example-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_EU868-o lr1110_modem_application_examples\lr1110_modem_lorawan.o --omf_browse lr1110_modem_application_examples\lr1110_modem_lorawan.crf --depend lr1110_modem_application_examples\lr1110_modem_lorawan.d)
+I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x607D97F9)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9AE028)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AE028)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_common.h)(0x600D03B2)
@@ -1870,7 +1939,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AE028)
 I (..\Src\radio\lr1110_modem\src\lr1110_types.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_hal.h)(0x600D03B2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9AE028)
-F (..\Src\boards\lr1110-modem-board.c)(0x600F807D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ..\Drivers\BSP\Components\external_supply --gnu-I.\RTE\_lr1110_modem_gnss_example-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_EU868-o lr1110_modem_application_examples\lr1110-modem-board.o --omf_browse lr1110_modem_application_examples\lr1110-modem-board.crf --depend lr1110_modem_application_examples\lr1110-modem-board.d)
+F (..\Src\boards\lr1110-modem-board.c)(0x607979AC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ..\Drivers\BSP\Components\external_supply --gnu-I.\RTE\_lr1110_modem_gnss_example-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_EU868-o lr1110_modem_application_examples\lr1110-modem-board.o --omf_browse lr1110_modem_application_examples\lr1110-modem-board.crf --depend lr1110_modem_application_examples\lr1110-modem-board.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AE02A)
 I (..\Src\radio\lr1110_modem\src\lr1110_hal.h)(0x600D03B2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AE028)
@@ -1878,7 +1947,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9AE028)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_hal.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_common.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_system.h)(0x600D03B2)
-I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x600D03B2)
+I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x607D97F9)
 I (..\Inc\boards\lr1110-modem-board.h)(0x6010F410)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AE02A)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AE028)
@@ -1941,11 +2010,11 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_spi.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_uart.h)(0x600D03B2)
 I (..\Inc\boards\utilities.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_i2c.h)(0x600D03B2)
-I (..\Inc\boards\board-config.h)(0x600D03B2)
+I (..\Inc\boards\board-config.h)(0x60812BE2)
 I (../Drivers/BSP/Components/lis2de12/lis2de12.h)(0x600D03B1)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5D9AE022)
 I (../Drivers/BSP/Components/Leds/leds.h)(0x600D03B1)
-I (..\Drivers\BSP\Components\external_supply\external_supply.h)(0x600D03B1)
+I (../Drivers/BSP/Components/external_supply/external_supply.h)(0x600D03B1)
 I (..\Src\radio\lr1110.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_bootloader.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_bootloader_types.h)(0x600D03B2)
@@ -2123,11 +2192,11 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_spi.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_uart.h)(0x600D03B2)
 I (..\Inc\boards\utilities.h)(0x600D03B2)
 I (..\Inc\smtc_hal\smtc_hal_i2c.h)(0x600D03B2)
-I (..\Inc\boards\board-config.h)(0x600D03B2)
+I (..\Inc\boards\board-config.h)(0x60812BE2)
 I (../Drivers/BSP/Components/lis2de12/lis2de12.h)(0x600D03B1)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5D9AE022)
 I (../Drivers/BSP/Components/Leds/leds.h)(0x600D03B1)
-I (..\Drivers\BSP\Components\external_supply\external_supply.h)(0x600D03B1)
+I (../Drivers/BSP/Components/external_supply/external_supply.h)(0x600D03B1)
 I (..\Src\radio\lr1110.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_bootloader.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_bootloader_types.h)(0x600D03B2)
@@ -2136,7 +2205,7 @@ I (..\Src\radio\lr1110_modem\src\lr1110_modem_common.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_hal.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_hal.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_gnss.h)(0x600D03B2)
-I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x600D03B2)
+I (..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h)(0x607D97F9)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_system.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_wifi.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_radio.h)(0x600E3626)

@@ -88,7 +88,7 @@ extern "C" {
  */
 #define LORAWAN_DEVICE_EUI                     \
     {                                          \
-        IEEE_OUI, 0x00, 0x00, 0x00, 0x00, 0x00 \
+       0x00 ,0x16, 0xC0, 0x01, 0xF0, 0x00, 0x62, 0xFB \
     }
 #define LORAWAN_DEVICE_EUI_LEN 8
 
