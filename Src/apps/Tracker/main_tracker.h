@@ -64,10 +64,11 @@ extern "C" {
 #define WATCHDOG_TIMEOUT 180000
 
 /*!
+.
  * \brief Defines the application keep alive frame interval
  * when device doesn't move. 3600s, value in [ms].
  */
-#define TRACKER_KEEP_ALIVE_FRAME_INTERVAL 3600000
+#define TRACKER_KEEP_ALIVE_FRAME_INTERVAL 300000
 
 /*!
  * \brief Defines the application data transmission duty cycle counter.
@@ -77,8 +78,9 @@ extern "C" {
 
 /*!
  * \brief Use or not the LoRaWAN production Keys.
+ 
  */
-#define USE_PRODUCTION_KEYS 1
+#define USE_PRODUCTION_KEYS 0
 
 /*!
  * Defines the application firmware version
