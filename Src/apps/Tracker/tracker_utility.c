@@ -90,7 +90,8 @@ void tracker_init_app_ctx( uint8_t *dev_eui, uint8_t *join_eui, uint8_t *app_key
     tracker_ctx.gnss_settings.constellation_to_use      = LR1110_MODEM_GNSS_GPS_MASK | LR1110_MODEM_GNSS_BEIDOU_MASK ;
     tracker_ctx.gnss_settings.scan_type                 = AUTONOMOUS_MODE;
     tracker_ctx.gnss_settings.search_mode               = LR1110_MODEM_GNSS_OPTION_BEST_EFFORT;
-    /* Set default position to Semtech France */
+	
+    /* Set default position to RFThingsVietNam */
     tracker_ctx.gnss_settings.assistance_position.latitude  = 10.867802;
     tracker_ctx.gnss_settings.assistance_position.longitude = 106.793966;
 

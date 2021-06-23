@@ -90,7 +90,7 @@ int main( void )
     lr1110_modem_event_t         lr1110_modem_event = {};
     lr1110_modem_version_t       modem;
     gnss_settings_t              gnss_settings;
-    uint32_t                     unix_date     = 1617861914;
+    uint32_t                     unix_date     = 1619318724;
     uint8_t                      rx_buffer[EPOCH_BUFFER_LEN] = { 0 };
 
     // Init board

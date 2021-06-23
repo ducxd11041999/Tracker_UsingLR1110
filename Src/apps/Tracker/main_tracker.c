@@ -62,7 +62,7 @@
  * \brief Defines DEBUG MODE PRINT DATA SAVE POWER,
  * value in [ms].
  */
-#define DEBUG_MODE_PRINT 0
+#define DEBUG_MODE_PRINT 1 
  
 /*!
  * \brief Defines a random delay for application data transmission duty cycle. 1s,
@@ -92,7 +92,7 @@
  *
  * \remark see ACCELEROMETER_MOUNTED definition
  */
-#define USE_ACCELEROMETER true
+#define USE_ACCELEROMETER false
 
 /*
  * -----------------------------------------------------------------------------
@@ -135,7 +135,7 @@ extern wifi_t wifi;
 /*!
  * \brief ADR custom list when ADR is set to custom
  */
-uint8_t adr_custom_list[16] = { 0x05, 0x05, 0x05, 0x04, 0x04, 0x04, 0x03, 0x03,
+uint8_t adr_custom_list[16] = { 0x05, 0x05, 0x0F, 0x04, 0x04, 0x04, 0x03, 0x03,
                                 0x03, 0x02, 0x02, 0x02, 0x01, 0x01, 0x00, 0x00 };
 
 /*!
@@ -390,7 +390,7 @@ int main( void )
     hal_mcu_init( );
     hal_mcu_init_periph( );
 		/*bme280*/
-		bme280_init();
+		//bme280_init();
     /* Board is initialized */
     leds_blink( LED_ALL_MASK, 100, 2, true );
     
@@ -605,14 +605,14 @@ int main( void )
                     }
 										/*if scaned gps then pass to wifi*/
 										/*  WIFI SCAN */
-                    if( tracker_ctx.wifi_settings.enabled == true && tracker_ctx.nb_detected_satellites < 3)
+                    if( tracker_ctx.wifi_settings.enabled == true && tracker_ctx.nb_detected_satellites < 4)
                     {
                         tracker_run_wifi_scan( tracker_ctx.wifi_settings, &tracker_ctx.wifi_result );
                     }
 										
                     /*  SENSORS TEST */
 #if(ACCELEROMETER_MOUNTED == 1)
-                    HAL_DBG_TRACE_INFO( "*** sensors collect ***\n\r\n\r" );
+                    //HAL_DBG_TRACE_INFO( "*** sensors collect ***\n\r\n\r" );
                     /* Acceleration*/
                     acc_read_raw_data( );
                     tracker_ctx.accelerometer_x = acc_get_raw_x( );
@@ -631,10 +631,10 @@ int main( void )
                     /* Temperature */
                     tracker_ctx.tout = acc_get_temperature( );
 										#if DEBUG_MODE_PRINT == 1
-                    HAL_DBG_TRACE_PRINTF( "Temperature : %d *C\r\n", tracker_ctx.tout/100 );
+                    HAL_DBG_TRACE_PRINTF( "Temperature : %d *C\r\n", tracker_ctx.tout / 100 );
 										#endif
 										/* Read data bme*/
-										bmp280_read_float(&bmp280, &temperature, &pressure, &humidity);
+										//bmp280_read_float(&bmp280, &temperature, &pressure, &humidity);
 										
 										#if DEBUG_MODE_PRINT == 1
                     HAL_DBG_TRACE_PRINTF( "Read data BME : %d *C\r\n");\
@@ -935,7 +935,9 @@ static lr1110_modem_response_code_t lorawan_init( void )
 				lr1110_modem_board_set_rf_tx_power_offset(&lr1110, TX_POWER);
 #endif
 #if defined( USE_REGION_US915 )
+				#if DEBUG_MODE_PRINT == 1
         HAL_DBG_TRACE_MSG( "REGION      : US915\r\n\r\n" );
+				#endif
         modem_response_code |= lr1110_modem_set_region( &lr1110, LR1110_LORAWAN_REGION_US915 );
 			//	modem_response_code |= lr1110_modem_activate_duty_cycle( &lr1110, LORAWAN_DUTYCYCLE_ON);
 #endif
@@ -1028,6 +1030,7 @@ static void join_network( void )
 
     /* Starts the join procedure */
     modem_response_code = lr1110_modem_join( &lr1110 );
+		#if DEBUG_MODE_PRINT == 1
     if( modem_response_code == LR1110_MODEM_RESPONSE_CODE_OK )
     {
         HAL_DBG_TRACE_INFO( "###### ===== JOINING ==== ######\r\n\r\n" );
@@ -1036,6 +1039,7 @@ static void join_network( void )
     {
         HAL_DBG_TRACE_ERROR( "###### ===== JOINING CMD ERROR ==== ######\r\n\r\n" );
     }
+		#endif
 }
 
 static bool add_payload_in_streaming_fifo( uint8_t* payload, uint16_t len )
@@ -1125,7 +1129,11 @@ static void lr1110_modem_network_joined( void )
     lr1110_modem_set_adr_profile( &lr1110, LORAWAN_MOBILE_DATARATE, adr_custom_list );
 }
 
-static void lr1110_modem_join_fail( void ) { HAL_DBG_TRACE_INFO( "###### ===== JOIN FAIL ==== ######\r\n\r\n" ); }
+static void lr1110_modem_join_fail( void ) { 
+		#if DEBUG_MODE_PRINT == 1
+		HAL_DBG_TRACE_INFO( "###### ===== JOIN FAIL ==== ######\r\n\r\n" ); 
+		#endif
+	}
 
 static void modem_status_to_string( lr1110_modem_status_t modem_status )
 {
@@ -1256,8 +1264,10 @@ static void lr1110_modem_set_conf( uint8_t infor_tag )
 
 static void lr1110_modem_stream_done( void )
 {
-	
+		
+		#if DEBUG_MODE_PRINT == 1
     HAL_DBG_TRACE_INFO( "###### ===== STREAM DONE nb %d ==== ######\r\n\r\n", stream_cnt++ );
+		#endif
     tracker_ctx.stream_done = true;
 }
 
