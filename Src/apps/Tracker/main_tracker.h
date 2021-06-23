@@ -81,7 +81,10 @@ extern "C" {
  
  */
 #define USE_PRODUCTION_KEYS 0
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5c66ad1c394a621fbae2434a7536c386a54ffed4
 
 /*!
  * Defines the application firmware version

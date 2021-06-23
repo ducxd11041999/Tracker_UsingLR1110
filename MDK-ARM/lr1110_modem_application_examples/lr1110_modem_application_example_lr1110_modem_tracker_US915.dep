@@ -5,10 +5,10 @@ F (..\Src\apps\LoRaWAN\main_lorawan.c)(0x60795BD9)()
 F (..\Src\apps\update-firmware\update_firmware.c)(0x600D03B2)()
 F (..\Src\apps\wifi_test\main_test_wifi.c)(0x600D03B2)()
 F (..\Src\apps\gnss_test\main_test_gnss.c)(0x6084D7EA)()
-F (..\Src\apps\Tracker\main_tracker.c)(0x60BB40B3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ../Drivers/BSP/Components/external_supply -I ../Drivers/BSP/Components/lis2de12 -I ../Drivers/BSP/Component/BME280 --gnu-I.\RTE\_lr1110_modem_tracker_US915-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_US915-o lr1110_modem_application_examples\main_tracker.o --omf_browse lr1110_modem_application_examples\main_tracker.crf --depend lr1110_modem_application_examples\main_tracker.d)
+F (..\Src\apps\Tracker\main_tracker.c)(0x60D3102D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ../Drivers/BSP/Components/external_supply -I ../Drivers/BSP/Components/lis2de12 -I ../Drivers/BSP/Component/BME280 --gnu-I.\RTE\_lr1110_modem_tracker_US915-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_US915-o lr1110_modem_application_examples\main_tracker.o --omf_browse lr1110_modem_application_examples\main_tracker.crf --depend lr1110_modem_application_examples\main_tracker.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AE02A)
 I (C:\Keil_v5\ARM\ARMCC\include\time.h)(0x5D9AE022)
-I (..\Src\apps\Tracker\main_tracker.h)(0x60D30A3A)
+I (..\Src\apps\Tracker\main_tracker.h)(0x60D3102D)
 I (..\Inc\boards\lr1110-modem-board.h)(0x6010F410)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AE028)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9AE028)
@@ -91,7 +91,7 @@ I (..\Src\radio\lr1110_modem\src\lr1110_modem_wifi.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_radio.h)(0x600E3626)
 I (..\Src\radio\lr1110_modem\src\lr1110_radio_types.h)(0x600E2E5D)
 I (..\Src\radio\lr1110_modem\src\lr1110_regmem.h)(0x600E2E5D)
-I (..\Src\apps\Tracker\Commissioning_tracker.h)(0x60D30884)
+I (..\Src\apps\Tracker\Commissioning_tracker.h)(0x60D3102D)
 I (..\Src\radio\wifi\wifi_scan.h)(0x600D03B2)
 I (..\Src\radio\gnss\gnss_scan.h)(0x600D03B2)
 I (..\Src\apps\Tracker\tracker_utility.h)(0x60822F46)
@@ -1561,7 +1561,7 @@ I (..\Src\apps\Tracker\tracker_utility.h)(0x60822F46)
 I (..\Src\radio\wifi\wifi_scan.h)(0x600D03B2)
 I (..\Src\radio\gnss\gnss_scan.h)(0x600D03B2)
 I (..\Src\apps\Tracker\bmp280.h)(0x60822D5A)
-I (..\Src\apps\Tracker\main_tracker.h)(0x60D30A3A)
+I (..\Src\apps\Tracker\main_tracker.h)(0x60D3102D)
 F (..\Src\radio\wifi\wifi_scan.c)(0x605F27BD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Components/lis2de12/ -I ..\Inc\boards -I ..\Inc\system -I ..\Src\radio\lr1110_modem\src -I ..\Src\radio -I ..\Drivers\EEPROM_Emul\Core -I ..\Drivers\EEPROM_Emul\Porting\STM32L4 -I ..\Src\apps\update-firmware -I ..\Src\radio\lr1110_trx -I ../Drivers/BSP/Components/Leds -I ..\Inc\smtc_hal -I ..\Src\radio\wifi -I ..\Src\radio\gnss -I ../Drivers/BSP/Components/external_supply -I ../Drivers/BSP/Components/lis2de12 -I ../Drivers/BSP/Component/BME280 --gnu-I.\RTE\_lr1110_modem_tracker_US915-IC:\Users\17520\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\17520\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.5.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L476xx -DUSE_FULL_LL_DRIVER -DSTM32L476xx -DUSE_MODEM_LORA -DLR1110EVK -DUSE_REGION_US915-o lr1110_modem_application_examples\wifi_scan.o --omf_browse lr1110_modem_application_examples\wifi_scan.crf --depend lr1110_modem_application_examples\wifi_scan.d)
 I (..\Src\radio\wifi\wifi_scan.h)(0x600D03B2)
 I (..\Src\radio\lr1110_modem\src\lr1110_modem_wifi.h)(0x600D03B2)

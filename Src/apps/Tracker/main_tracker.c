@@ -631,7 +631,11 @@ int main( void )
                     /* Temperature */
                     tracker_ctx.tout = acc_get_temperature( );
 										#if DEBUG_MODE_PRINT == 1
+<<<<<<< HEAD
                     HAL_DBG_TRACE_PRINTF( "Temperature : %d *C\r\n", tracker_ctx.tout / 100 );
+=======
+                    HAL_DBG_TRACE_PRINTF( "Temperature : %d *C\r\n", tracker_ctx.tout/1000 );
+>>>>>>> 5c66ad1c394a621fbae2434a7536c386a54ffed4
 										#endif
 										/* Read data bme*/
 										//bmp280_read_float(&bmp280, &temperature, &pressure, &humidity);

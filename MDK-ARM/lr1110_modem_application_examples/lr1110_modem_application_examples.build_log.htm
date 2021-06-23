@@ -27,18 +27,80 @@ Project File Date:  04/23/2021
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'lr1110_modem_tracker_US915'
-compiling tracker_utility.c...
 compiling main_tracker.c...
-..\Src\apps\Tracker\main_tracker.c(1082): warning:  #177-D: function "is_tracker_in_static_mode"  was declared but never referenced
-  static bool is_tracker_in_static_mode( void )
-..\Src\apps\Tracker\main_tracker.c(1332): warning:  #177-D: function "bme280_init"  was declared but never referenced
-  static void bme280_init(void)
-..\Src\apps\Tracker\main_tracker.c: 2 warnings, 0 errors
-linking...
-Program Size: Code=37156 RO-data=852 RW-data=732 ZI-data=6948  
-FromELF: creating hex file...
-After Build - User command #1: C:\Keil_v5\\ARM\ARMCC\bin\fromelf.exe --bin --output=lr1110_modem_application_examples.bin lr1110_modem_application_examples\lr1110_modem_application_examples.axf
-"lr1110_modem_application_examples\lr1110_modem_application_examples.axf" - 0 Error(s), 2 Warning(s).
+..\Src\apps\Tracker\main_tracker.h(84): error:  #169: expected a declaration
+  <<<<<<< HEAD
+..\Src\apps\Tracker\main_tracker.h(87): error:  #19: extra text after expected end of number
+  >>>>>>> 5c66ad1c394a621fbae2434a7536c386a54ffed4
+..\Inc\boards\utilities.h(143): error:  #20: identifier "int8_t" is undefined
+  int8_t Nibble2HexChar( uint8_t a );
+..\Src\radio\lr1110_modem\src\lr1110_modem_gnss.h(207): error:  #20: identifier "int8_t" is undefined
+      int8_t                           cnr;  //!< Carrier-to-noise ration (C/N) in dB
+..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h(520): error:  #20: identifier "int8_t" is undefined
+  lr1110_modem_response_code_t lr1110_modem_get_tx_power_offset( const void* context, int8_t* tx_power_offset );
+..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h(531): error:  #20: identifier "int8_t" is undefined
+  lr1110_modem_response_code_t lr1110_modem_set_tx_power_offset( const void* context, const int8_t tx_power_offset );
+KB: Unexpected type: 0
+error type>(567): error:  #20: identifier "int8_t" is undefined
+  lr1110_modem_response_code_t lr1110_modem_test_tx_single( const void* context, uint32_t frequency, int8_t tx_power,
+..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h(584): error:  #20: identifier "int8_t" is undefined
+  lr1110_modem_response_code_t lr1110_modem_test_tx_cont( const void* context, uint32_t frequency, int8_t tx_power,
+..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h(597): error:  #20: identifier "int8_t" is undefined
+  lr1110_modem_response_code_t lr1110_modem_test_tx_cw( const void* context, uint32_t frequency, int8_t tx_power );
+..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h(706): error:  #20: identifier "int8_t" is undefined
+                                                                     int8_t tx_power, lr1110_modem_tst_mode_sf_t sf,
+..\Src\radio\lr1110_modem\src\lr1110_modem_lorawan.h(719): error:  #20: identifier "int8_t" is undefined
+  lr1110_modem_response_code_t lr1110_modem_test_read_rssi( const void* context, int8_t* rssi );
+..\Src\radio\lr1110_modem\src\lr1110_modem_wifi.h(203): error:  #20: identifier "int8_t" is undefined
+      int8_t                                   rssi;
+..\Src\radio\lr1110_modem\src\lr1110_modem_wifi.h(219): error:  #20: identifier "int8_t" is undefined
+      int8_t                                 rssi;
+..\Src\radio\lr1110.h(109): error:  #20: identifier "int8_t" is undefined
+      void ( *down_data )( int8_t rssi, int8_t snr, lr1110_modem_down_data_flag_t flags, uint8_t port, const uint8_t* payload, uint8_t size );
+..\Src\radio\lr1110.h(109): error:  #20: identifier "int8_t" is undefined
+      void ( *down_data )( int8_t rssi, int8_t snr, lr1110_modem_down_data_flag_t flags, uint8_t port, const uint8_t* payload, uint8_t size );
+..\Src\radio\lr1110_modem\src\lr1110_radio_types.h(398): error:  #20: identifier "int8_t" is undefined
+      int8_t  rssi_sync_in_dbm;  //!< RSSI value latched on detection of the last received packet Sync Address
+..\Src\radio\lr1110_modem\src\lr1110_radio_types.h(399): error:  #20: identifier "int8_t" is undefined
+      int8_t  rssi_avg_in_dbm;   //!< RSSI averaged over the payload of the last received packet
+..\Src\radio\lr1110_modem\src\lr1110_radio_types.h(416): error:  #20: identifier "int8_t" is undefined
+      int8_t rssi_pkt_in_dbm;         //!< Average RSSI over last received packet.
+..\Src\radio\lr1110_modem\src\lr1110_radio_types.h(417): error:  #20: identifier "int8_t" is undefined
+      int8_t snr_pkt_in_db;           //!< SNR estimated on last received packet.
+..\Src\radio\lr1110_modem\src\lr1110_radio_types.h(418): error:  #20: identifier "int8_t" is undefined
+      int8_t signal_rssi_pkt_in_dbm;  //!< RSSI of last packet latched after
+..\Src\radio\lr1110_modem\src\lr1110_radio.h(166): error:  #20: identifier "int8_t" is undefined
+  lr1110_status_t lr1110_radio_get_rssi_inst( const void* context, int8_t* rssi_in_dbm );
+..\Src\radio\lr1110_modem\src\lr1110_radio.h(444): error:  #20: identifier "int8_t" is undefined
+  lr1110_status_t lr1110_radio_set_tx_params( const void* context, const int8_t pwr_in_dbm,
+KB: Unexpected type: 0
+error type>(117): error:  #20: identifier "int8_t" is undefined
+  void lr1110_modem_board_set_rf_tx_power_offset( const void* context, int8_t tx_power_offset );
+..\Src\apps\Tracker\Commissioning_tracker.h(92): error:  #169: expected a declaration
+..\Src\apps\Tracker\Commissioning_tracker.h(95): error:  #19: extra text after expected end of number
+  >>>>>>> 5c66ad1c394a621fbae2434a7536c386a54ffed4
+..\Src\radio\wifi\wifi_scan.h(73): warning:  #12-D: parsing restarts here after previous syntax error
+  typedef uint8_t wifi_scan_result_t;
+..\Src\radio\wifi\wifi_scan.h(94): error:  #20: identifier "int8_t" is undefined
+      int8_t                                 rssi;
+..\Src\radio\wifi\wifi_scan.h(165): error:  #20: identifier "wifi_scan_result_t" is undefined
+  wifi_scan_result_t wifi_execute_scan( const void* context );
+..\Src\apps\Tracker\bmp280.h(110): error:  #20: identifier "int8_t" is undefined
+      int8_t   dig_H6;
+..\Src\apps\Tracker\main_tracker.c(274): error:  #20: identifier "int8_t" is undefined
+  static void lr1110_modem_down_data( int8_t rssi, int8_t snr, lr1110_modem_down_data_flag_t flags, uint8_t port,
+..\Src\apps\Tracker\main_tracker.c(274): error:  #20: identifier "int8_t" is undefined
+  static void lr1110_modem_down_data( int8_t rssi, int8_t snr, lr1110_modem_down_data_flag_t flags, uint8_t port,
+..\Src\apps\Tracker\main_tracker.c: 1 warning, 30 errors
+compiling tracker_utility.c...
+..\Src\apps\Tracker\main_tracker.h(84): error:  #169: expected a declaration
+  <<<<<<< HEAD
+..\Src\apps\Tracker\main_tracker.h(87): error:  #19: extra text after expected end of number
+  >>>>>>> 5c66ad1c394a621fbae2434a7536c386a54ffed4
+..\Src\apps\Tracker\tracker_utility.c(64): warning:  #12-D: parsing restarts here after previous syntax error
+  extern lr1110_t lr1110;
+..\Src\apps\Tracker\tracker_utility.c: 1 warning, 2 errors
+"lr1110_modem_application_examples\lr1110_modem_application_examples.axf" - 32 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -61,7 +123,8 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.3.0
-Build Time Elapsed:  00:00:15
+Target not created.
+Build Time Elapsed:  00:00:22
 </pre>
 </body>
 </html>
