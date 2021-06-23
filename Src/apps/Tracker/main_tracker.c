@@ -366,7 +366,7 @@ static void build_and_stream_payload( void );
 /*!
  * \brief init bme
  */
-static void bme280_init(void);
+//static void bme280_init(void);
 /*
  * -----------------------------------------------------------------------------
  * --- PUBLIC FUNCTIONS DEFINITION ---------------------------------------------
@@ -1330,6 +1330,7 @@ static void parse_frame( uint8_t port, const uint8_t* payload, uint8_t size )
         break;
     }
 }
+/*
 static void bme280_init(void)
 {
 		bmp280_init_default_params(&bmp280.params);
@@ -1339,5 +1340,5 @@ static void bme280_init(void)
 			HAL_Delay(500);
 		}
 }
-
+*/
 /* --- EOF ------------------------------------------------------------------ */

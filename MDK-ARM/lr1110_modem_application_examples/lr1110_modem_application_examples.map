@@ -32,11 +32,6 @@ Section Cross References
     main_tracker.o(i.add_payload_in_streaming_fifo) refers to lr1110_modem_lorawan.o(i.lr1110_modem_send_stream_data) for lr1110_modem_send_stream_data
     main_tracker.o(i.add_payload_in_streaming_fifo) refers to smtc_hal_mcu.o(.bss) for lr1110
     main_tracker.o(i.add_payload_in_streaming_fifo) refers to tracker_utility.o(.bss) for tracker_ctx
-    main_tracker.o(i.bme280_init) refers to bmp280.o(i.bmp280_init_default_params) for bmp280_init_default_params
-    main_tracker.o(i.bme280_init) refers to bmp280.o(i.bmp280_init) for bmp280_init
-    main_tracker.o(i.bme280_init) refers to smtc_hal_mcu.o(i.hal_mcu_trace_print) for hal_mcu_trace_print
-    main_tracker.o(i.bme280_init) refers to stm32l4xx_hal.o(i.HAL_Delay) for HAL_Delay
-    main_tracker.o(i.bme280_init) refers to main_tracker.o(.bss) for bmp280
     main_tracker.o(i.build_and_stream_payload) refers to smtc_hal_mcu.o(i.hal_mcu_trace_print) for hal_mcu_trace_print
     main_tracker.o(i.build_and_stream_payload) refers to memcpya.o(.text) for __aeabi_memcpy
     main_tracker.o(i.build_and_stream_payload) refers to main_tracker.o(i.add_payload_in_streaming_fifo) for add_payload_in_streaming_fifo
@@ -1994,7 +1989,6 @@ Removing Unused input sections from the image.
     Removing main_tracker.o(.revsh_text), (4 bytes).
     Removing main_tracker.o(.rrx_text), (6 bytes).
     Removing main_tracker.o(i._Error_Handler), (88 bytes).
-    Removing main_tracker.o(i.bme280_init), (140 bytes).
     Removing main_tracker.o(i.is_tracker_in_static_mode), (28 bytes).
     Removing main_tracker.o(.constdata), (15 bytes).
     Removing stm32l4xx_hal_i2c.o(.rev16_text), (4 bytes).
@@ -3132,7 +3126,7 @@ Removing Unused input sections from the image.
     Removing d2f.o(.text), (56 bytes).
     Removing fepilogue.o(.text), (110 bytes).
 
-1142 unused section(s) (total 87724 bytes) removed from the image.
+1141 unused section(s) (total 87584 bytes) removed from the image.
 
 ==============================================================================
 
@@ -4169,413 +4163,413 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x00000188   Data   RO            3    RESET               startup_stm32l476xx.o
-    0x08000188   0x08000188   0x00000000   Code   RO         9089  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000188   0x08000188   0x00000004   Code   RO         9146    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x0800018c   0x0800018c   0x00000004   Code   RO         9149    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000190   0x08000190   0x00000000   Code   RO         9151    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000190   0x08000190   0x00000000   Code   RO         9153    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000190   0x08000190   0x00000008   Code   RO         9154    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000198   0x08000198   0x00000000   Code   RO         9156    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000198   0x08000198   0x00000000   Code   RO         9158    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000198   0x08000198   0x00000004   Code   RO         9147    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000188   0x08000188   0x00000000   Code   RO         9084  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000188   0x08000188   0x00000004   Code   RO         9141    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0800018c   0x0800018c   0x00000004   Code   RO         9144    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000190   0x08000190   0x00000000   Code   RO         9146    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000190   0x08000190   0x00000000   Code   RO         9148    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000190   0x08000190   0x00000008   Code   RO         9149    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000198   0x08000198   0x00000000   Code   RO         9151    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000198   0x08000198   0x00000000   Code   RO         9153    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000198   0x08000198   0x00000004   Code   RO         9142    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x0800019c   0x0800019c   0x00000024   Code   RO            4    .text               startup_stm32l476xx.o
-    0x080001c0   0x080001c0   0x00000068   Code   RO         9092    .text               mc_w.l(uldiv.o)
-    0x08000228   0x08000228   0x00000094   Code   RO         9096    .text               mc_w.l(localtime.o)
-    0x080002bc   0x080002bc   0x00000024   Code   RO         9100    .text               mc_w.l(memcpya.o)
-    0x080002e0   0x080002e0   0x00000024   Code   RO         9102    .text               mc_w.l(memseta.o)
-    0x08000304   0x08000304   0x0000000e   Code   RO         9104    .text               mc_w.l(strlen.o)
-    0x08000312   0x08000312   0x000000de   Code   RO         9136    .text               mf_w.l(ddiv.o)
-    0x080003f0   0x080003f0   0x0000001a   Code   RO         9138    .text               mf_w.l(dfltui.o)
-    0x0800040a   0x0800040a   0x00000032   Code   RO         9140    .text               mf_w.l(dfixui.o)
-    0x0800043c   0x0800043c   0x0000002c   Code   RO         9163    .text               mc_w.l(uidiv.o)
-    0x08000468   0x08000468   0x0000001e   Code   RO         9165    .text               mc_w.l(llshl.o)
-    0x08000486   0x08000486   0x00000020   Code   RO         9167    .text               mc_w.l(llushr.o)
-    0x080004a6   0x080004a6   0x00000000   Code   RO         9169    .text               mc_w.l(iusefp.o)
-    0x080004a6   0x080004a6   0x000000ba   Code   RO         9172    .text               mf_w.l(depilogue.o)
-    0x08000560   0x08000560   0x0000015e   Code   RO         9174    .text               mf_w.l(dadd.o)
-    0x080006be   0x080006be   0x000000ea   Code   RO         9176    .text               mf_w.l(dmul.o)
-    0x080007a8   0x080007a8   0x00000030   Code   RO         9178    .text               mf_w.l(dfixul.o)
-    0x080007d8   0x080007d8   0x00000030   Code   RO         9180    .text               mf_w.l(cdrcmple.o)
-    0x08000808   0x08000808   0x00000024   Code   RO         9182    .text               mc_w.l(init.o)
-    0x0800082c   0x0800082c   0x00000024   Code   RO         9185    .text               mc_w.l(llsshr.o)
-    0x08000850   0x08000850   0x00000056   Code   RO         9196    .text               mc_w.l(__dczerorl2.o)
-    0x080008a6   0x080008a6   0x0000000a   Code   RO         8018    i.EXTI0_IRQHandler  smtc_hal_gpio.o
-    0x080008b0   0x080008b0   0x00000034   Code   RO         8019    i.EXTI15_10_IRQHandler  smtc_hal_gpio.o
-    0x080008e4   0x080008e4   0x0000000a   Code   RO         8020    i.EXTI1_IRQHandler  smtc_hal_gpio.o
-    0x080008ee   0x080008ee   0x0000000a   Code   RO         8021    i.EXTI2_IRQHandler  smtc_hal_gpio.o
-    0x080008f8   0x080008f8   0x0000000a   Code   RO         8022    i.EXTI3_IRQHandler  smtc_hal_gpio.o
-    0x08000902   0x08000902   0x0000000a   Code   RO         8023    i.EXTI4_IRQHandler  smtc_hal_gpio.o
-    0x0800090c   0x0800090c   0x00000026   Code   RO         8024    i.EXTI9_5_IRQHandler  smtc_hal_gpio.o
+    0x080001c0   0x080001c0   0x00000068   Code   RO         9087    .text               mc_w.l(uldiv.o)
+    0x08000228   0x08000228   0x00000094   Code   RO         9091    .text               mc_w.l(localtime.o)
+    0x080002bc   0x080002bc   0x00000024   Code   RO         9095    .text               mc_w.l(memcpya.o)
+    0x080002e0   0x080002e0   0x00000024   Code   RO         9097    .text               mc_w.l(memseta.o)
+    0x08000304   0x08000304   0x0000000e   Code   RO         9099    .text               mc_w.l(strlen.o)
+    0x08000312   0x08000312   0x000000de   Code   RO         9131    .text               mf_w.l(ddiv.o)
+    0x080003f0   0x080003f0   0x0000001a   Code   RO         9133    .text               mf_w.l(dfltui.o)
+    0x0800040a   0x0800040a   0x00000032   Code   RO         9135    .text               mf_w.l(dfixui.o)
+    0x0800043c   0x0800043c   0x0000002c   Code   RO         9158    .text               mc_w.l(uidiv.o)
+    0x08000468   0x08000468   0x0000001e   Code   RO         9160    .text               mc_w.l(llshl.o)
+    0x08000486   0x08000486   0x00000020   Code   RO         9162    .text               mc_w.l(llushr.o)
+    0x080004a6   0x080004a6   0x00000000   Code   RO         9164    .text               mc_w.l(iusefp.o)
+    0x080004a6   0x080004a6   0x000000ba   Code   RO         9167    .text               mf_w.l(depilogue.o)
+    0x08000560   0x08000560   0x0000015e   Code   RO         9169    .text               mf_w.l(dadd.o)
+    0x080006be   0x080006be   0x000000ea   Code   RO         9171    .text               mf_w.l(dmul.o)
+    0x080007a8   0x080007a8   0x00000030   Code   RO         9173    .text               mf_w.l(dfixul.o)
+    0x080007d8   0x080007d8   0x00000030   Code   RO         9175    .text               mf_w.l(cdrcmple.o)
+    0x08000808   0x08000808   0x00000024   Code   RO         9177    .text               mc_w.l(init.o)
+    0x0800082c   0x0800082c   0x00000024   Code   RO         9180    .text               mc_w.l(llsshr.o)
+    0x08000850   0x08000850   0x00000056   Code   RO         9191    .text               mc_w.l(__dczerorl2.o)
+    0x080008a6   0x080008a6   0x0000000a   Code   RO         8013    i.EXTI0_IRQHandler  smtc_hal_gpio.o
+    0x080008b0   0x080008b0   0x00000034   Code   RO         8014    i.EXTI15_10_IRQHandler  smtc_hal_gpio.o
+    0x080008e4   0x080008e4   0x0000000a   Code   RO         8015    i.EXTI1_IRQHandler  smtc_hal_gpio.o
+    0x080008ee   0x080008ee   0x0000000a   Code   RO         8016    i.EXTI2_IRQHandler  smtc_hal_gpio.o
+    0x080008f8   0x080008f8   0x0000000a   Code   RO         8017    i.EXTI3_IRQHandler  smtc_hal_gpio.o
+    0x08000902   0x08000902   0x0000000a   Code   RO         8018    i.EXTI4_IRQHandler  smtc_hal_gpio.o
+    0x0800090c   0x0800090c   0x00000026   Code   RO         8019    i.EXTI9_5_IRQHandler  smtc_hal_gpio.o
     0x08000932   0x08000932   0x00000002   PAD
-    0x08000934   0x08000934   0x00000014   Code   RO         3122    i.HAL_DBGMCU_DisableDBGSleepMode  stm32l4xx_hal.o
-    0x08000948   0x08000948   0x00000014   Code   RO         3123    i.HAL_DBGMCU_DisableDBGStandbyMode  stm32l4xx_hal.o
-    0x0800095c   0x0800095c   0x00000014   Code   RO         3124    i.HAL_DBGMCU_DisableDBGStopMode  stm32l4xx_hal.o
-    0x08000970   0x08000970   0x0000005c   Code   RO         3904    i.HAL_DMA_Abort_IT  stm32l4xx_hal_dma.o
-    0x080009cc   0x080009cc   0x00000028   Code   RO         3129    i.HAL_Delay         stm32l4xx_hal.o
-    0x080009f4   0x080009f4   0x00000144   Code   RO         3836    i.HAL_GPIO_DeInit   stm32l4xx_hal_gpio.o
-    0x08000b38   0x08000b38   0x00000040   Code   RO         8025    i.HAL_GPIO_EXTI_Callback  smtc_hal_gpio.o
-    0x08000b78   0x08000b78   0x0000001c   Code   RO         3838    i.HAL_GPIO_EXTI_IRQHandler  stm32l4xx_hal_gpio.o
-    0x08000b94   0x08000b94   0x00000204   Code   RO         3839    i.HAL_GPIO_Init     stm32l4xx_hal_gpio.o
-    0x08000d98   0x08000d98   0x00000010   Code   RO         3841    i.HAL_GPIO_ReadPin  stm32l4xx_hal_gpio.o
-    0x08000da8   0x08000da8   0x0000000a   Code   RO         3843    i.HAL_GPIO_WritePin  stm32l4xx_hal_gpio.o
+    0x08000934   0x08000934   0x00000014   Code   RO         3117    i.HAL_DBGMCU_DisableDBGSleepMode  stm32l4xx_hal.o
+    0x08000948   0x08000948   0x00000014   Code   RO         3118    i.HAL_DBGMCU_DisableDBGStandbyMode  stm32l4xx_hal.o
+    0x0800095c   0x0800095c   0x00000014   Code   RO         3119    i.HAL_DBGMCU_DisableDBGStopMode  stm32l4xx_hal.o
+    0x08000970   0x08000970   0x0000005c   Code   RO         3899    i.HAL_DMA_Abort_IT  stm32l4xx_hal_dma.o
+    0x080009cc   0x080009cc   0x00000028   Code   RO         3124    i.HAL_Delay         stm32l4xx_hal.o
+    0x080009f4   0x080009f4   0x00000144   Code   RO         3831    i.HAL_GPIO_DeInit   stm32l4xx_hal_gpio.o
+    0x08000b38   0x08000b38   0x00000040   Code   RO         8020    i.HAL_GPIO_EXTI_Callback  smtc_hal_gpio.o
+    0x08000b78   0x08000b78   0x0000001c   Code   RO         3833    i.HAL_GPIO_EXTI_IRQHandler  stm32l4xx_hal_gpio.o
+    0x08000b94   0x08000b94   0x00000204   Code   RO         3834    i.HAL_GPIO_Init     stm32l4xx_hal_gpio.o
+    0x08000d98   0x08000d98   0x00000010   Code   RO         3836    i.HAL_GPIO_ReadPin  stm32l4xx_hal_gpio.o
+    0x08000da8   0x08000da8   0x0000000a   Code   RO         3838    i.HAL_GPIO_WritePin  stm32l4xx_hal_gpio.o
     0x08000db2   0x08000db2   0x00000002   PAD
-    0x08000db4   0x08000db4   0x0000000c   Code   RO         3133    i.HAL_GetTick       stm32l4xx_hal.o
-    0x08000dc0   0x08000dc0   0x00000018   Code   RO         3139    i.HAL_IncTick       stm32l4xx_hal.o
-    0x08000dd8   0x08000dd8   0x0000001e   Code   RO         3140    i.HAL_Init          stm32l4xx_hal.o
+    0x08000db4   0x08000db4   0x0000000c   Code   RO         3128    i.HAL_GetTick       stm32l4xx_hal.o
+    0x08000dc0   0x08000dc0   0x00000018   Code   RO         3134    i.HAL_IncTick       stm32l4xx_hal.o
+    0x08000dd8   0x08000dd8   0x0000001e   Code   RO         3135    i.HAL_Init          stm32l4xx_hal.o
     0x08000df6   0x08000df6   0x00000002   PAD
-    0x08000df8   0x08000df8   0x00000058   Code   RO         3141    i.HAL_InitTick      stm32l4xx_hal.o
-    0x08000e50   0x08000e50   0x00000002   Code   RO         1108    i.HAL_LPTIM_AutoReloadMatchCallback  stm32l4xx_hal_lptim.o
-    0x08000e52   0x08000e52   0x00000002   Code   RO         1109    i.HAL_LPTIM_AutoReloadWriteCallback  stm32l4xx_hal_lptim.o
-    0x08000e54   0x08000e54   0x00000002   Code   RO         1110    i.HAL_LPTIM_CompareMatchCallback  stm32l4xx_hal_lptim.o
-    0x08000e56   0x08000e56   0x00000002   Code   RO         1111    i.HAL_LPTIM_CompareWriteCallback  stm32l4xx_hal_lptim.o
-    0x08000e58   0x08000e58   0x00000002   Code   RO         1117    i.HAL_LPTIM_DirectionDownCallback  stm32l4xx_hal_lptim.o
-    0x08000e5a   0x08000e5a   0x00000002   Code   RO         1118    i.HAL_LPTIM_DirectionUpCallback  stm32l4xx_hal_lptim.o
-    0x08000e5c   0x08000e5c   0x000000e6   Code   RO         1124    i.HAL_LPTIM_IRQHandler  stm32l4xx_hal_lptim.o
+    0x08000df8   0x08000df8   0x00000058   Code   RO         3136    i.HAL_InitTick      stm32l4xx_hal.o
+    0x08000e50   0x08000e50   0x00000002   Code   RO         1103    i.HAL_LPTIM_AutoReloadMatchCallback  stm32l4xx_hal_lptim.o
+    0x08000e52   0x08000e52   0x00000002   Code   RO         1104    i.HAL_LPTIM_AutoReloadWriteCallback  stm32l4xx_hal_lptim.o
+    0x08000e54   0x08000e54   0x00000002   Code   RO         1105    i.HAL_LPTIM_CompareMatchCallback  stm32l4xx_hal_lptim.o
+    0x08000e56   0x08000e56   0x00000002   Code   RO         1106    i.HAL_LPTIM_CompareWriteCallback  stm32l4xx_hal_lptim.o
+    0x08000e58   0x08000e58   0x00000002   Code   RO         1112    i.HAL_LPTIM_DirectionDownCallback  stm32l4xx_hal_lptim.o
+    0x08000e5a   0x08000e5a   0x00000002   Code   RO         1113    i.HAL_LPTIM_DirectionUpCallback  stm32l4xx_hal_lptim.o
+    0x08000e5c   0x08000e5c   0x000000e6   Code   RO         1119    i.HAL_LPTIM_IRQHandler  stm32l4xx_hal_lptim.o
     0x08000f42   0x08000f42   0x00000002   PAD
-    0x08000f44   0x08000f44   0x000000d0   Code   RO         1125    i.HAL_LPTIM_Init    stm32l4xx_hal_lptim.o
-    0x08001014   0x08001014   0x00000044   Code   RO         8789    i.HAL_LPTIM_MspInit  smtc_hal_tmr.o
-    0x08001058   0x08001058   0x00000026   Code   RO         1145    i.HAL_LPTIM_TimeOut_Stop  stm32l4xx_hal_lptim.o
-    0x0800107e   0x0800107e   0x00000002   Code   RO         1147    i.HAL_LPTIM_TriggerCallback  stm32l4xx_hal_lptim.o
-    0x08001080   0x08001080   0x00000090   Code   RO         8255    i.HAL_MspInit       smtc_hal_mcu.o
-    0x08001110   0x08001110   0x00000020   Code   RO         4380    i.HAL_NVIC_EnableIRQ  stm32l4xx_hal_cortex.o
-    0x08001130   0x08001130   0x00000082   Code   RO         4386    i.HAL_NVIC_SetPriority  stm32l4xx_hal_cortex.o
+    0x08000f44   0x08000f44   0x000000d0   Code   RO         1120    i.HAL_LPTIM_Init    stm32l4xx_hal_lptim.o
+    0x08001014   0x08001014   0x00000044   Code   RO         8784    i.HAL_LPTIM_MspInit  smtc_hal_tmr.o
+    0x08001058   0x08001058   0x00000026   Code   RO         1140    i.HAL_LPTIM_TimeOut_Stop  stm32l4xx_hal_lptim.o
+    0x0800107e   0x0800107e   0x00000002   Code   RO         1142    i.HAL_LPTIM_TriggerCallback  stm32l4xx_hal_lptim.o
+    0x08001080   0x08001080   0x00000090   Code   RO         8250    i.HAL_MspInit       smtc_hal_mcu.o
+    0x08001110   0x08001110   0x00000020   Code   RO         4375    i.HAL_NVIC_EnableIRQ  stm32l4xx_hal_cortex.o
+    0x08001130   0x08001130   0x00000082   Code   RO         4381    i.HAL_NVIC_SetPriority  stm32l4xx_hal_cortex.o
     0x080011b2   0x080011b2   0x00000002   PAD
-    0x080011b4   0x080011b4   0x00000028   Code   RO         4387    i.HAL_NVIC_SetPriorityGrouping  stm32l4xx_hal_cortex.o
-    0x080011dc   0x080011dc   0x00000040   Code   RO         4160    i.HAL_PWREx_EnterSTOP2Mode  stm32l4xx_hal_pwr_ex.o
-    0x0800121c   0x0800121c   0x00000010   Code   RO         4161    i.HAL_PWREx_GetVoltageRange  stm32l4xx_hal_pwr_ex.o
-    0x0800122c   0x0800122c   0x000000b8   Code   RO         4015    i.HAL_PWR_ConfigPVD  stm32l4xx_hal_pwr.o
-    0x080012e4   0x080012e4   0x00000014   Code   RO         4023    i.HAL_PWR_EnablePVD  stm32l4xx_hal_pwr.o
-    0x080012f8   0x080012f8   0x000004d4   Code   RO         3472    i.HAL_RCCEx_PeriphCLKConfig  stm32l4xx_hal_rcc_ex.o
-    0x080017cc   0x080017cc   0x0000017c   Code   RO         3357    i.HAL_RCC_ClockConfig  stm32l4xx_hal_rcc.o
-    0x08001948   0x08001948   0x0000000c   Code   RO         3361    i.HAL_RCC_GetHCLKFreq  stm32l4xx_hal_rcc.o
-    0x08001954   0x08001954   0x00000024   Code   RO         3363    i.HAL_RCC_GetPCLK1Freq  stm32l4xx_hal_rcc.o
-    0x08001978   0x08001978   0x00000024   Code   RO         3364    i.HAL_RCC_GetPCLK2Freq  stm32l4xx_hal_rcc.o
-    0x0800199c   0x0800199c   0x000000ec   Code   RO         3365    i.HAL_RCC_GetSysClockFreq  stm32l4xx_hal_rcc.o
-    0x08001a88   0x08001a88   0x0000068c   Code   RO         3368    i.HAL_RCC_OscConfig  stm32l4xx_hal_rcc.o
-    0x08002114   0x08002114   0x00000058   Code   RO         5001    i.HAL_RTCEx_EnableBypassShadow  stm32l4xx_hal_rtc_ex.o
-    0x0800216c   0x0800216c   0x00000002   Code   RO         5026    i.HAL_RTCEx_WakeUpTimerEventCallback  stm32l4xx_hal_rtc_ex.o
+    0x080011b4   0x080011b4   0x00000028   Code   RO         4382    i.HAL_NVIC_SetPriorityGrouping  stm32l4xx_hal_cortex.o
+    0x080011dc   0x080011dc   0x00000040   Code   RO         4155    i.HAL_PWREx_EnterSTOP2Mode  stm32l4xx_hal_pwr_ex.o
+    0x0800121c   0x0800121c   0x00000010   Code   RO         4156    i.HAL_PWREx_GetVoltageRange  stm32l4xx_hal_pwr_ex.o
+    0x0800122c   0x0800122c   0x000000b8   Code   RO         4010    i.HAL_PWR_ConfigPVD  stm32l4xx_hal_pwr.o
+    0x080012e4   0x080012e4   0x00000014   Code   RO         4018    i.HAL_PWR_EnablePVD  stm32l4xx_hal_pwr.o
+    0x080012f8   0x080012f8   0x000004d4   Code   RO         3467    i.HAL_RCCEx_PeriphCLKConfig  stm32l4xx_hal_rcc_ex.o
+    0x080017cc   0x080017cc   0x0000017c   Code   RO         3352    i.HAL_RCC_ClockConfig  stm32l4xx_hal_rcc.o
+    0x08001948   0x08001948   0x0000000c   Code   RO         3356    i.HAL_RCC_GetHCLKFreq  stm32l4xx_hal_rcc.o
+    0x08001954   0x08001954   0x00000024   Code   RO         3358    i.HAL_RCC_GetPCLK1Freq  stm32l4xx_hal_rcc.o
+    0x08001978   0x08001978   0x00000024   Code   RO         3359    i.HAL_RCC_GetPCLK2Freq  stm32l4xx_hal_rcc.o
+    0x0800199c   0x0800199c   0x000000ec   Code   RO         3360    i.HAL_RCC_GetSysClockFreq  stm32l4xx_hal_rcc.o
+    0x08001a88   0x08001a88   0x0000068c   Code   RO         3363    i.HAL_RCC_OscConfig  stm32l4xx_hal_rcc.o
+    0x08002114   0x08002114   0x00000058   Code   RO         4996    i.HAL_RTCEx_EnableBypassShadow  stm32l4xx_hal_rtc_ex.o
+    0x0800216c   0x0800216c   0x00000002   Code   RO         5021    i.HAL_RTCEx_WakeUpTimerEventCallback  stm32l4xx_hal_rtc_ex.o
     0x0800216e   0x0800216e   0x00000002   PAD
-    0x08002170   0x08002170   0x00000038   Code   RO         5027    i.HAL_RTCEx_WakeUpTimerIRQHandler  stm32l4xx_hal_rtc_ex.o
-    0x080021a8   0x080021a8   0x0000000a   Code   RO         8554    i.HAL_RTC_AlarmAEventCallback  smtc_hal_rtc.o
-    0x080021b2   0x080021b2   0x00000106   Code   RO         4850    i.HAL_RTC_DeactivateAlarm  stm32l4xx_hal_rtc.o
-    0x080022b8   0x080022b8   0x0000004c   Code   RO         4852    i.HAL_RTC_GetDate   stm32l4xx_hal_rtc.o
-    0x08002304   0x08002304   0x0000005c   Code   RO         4854    i.HAL_RTC_GetTime   stm32l4xx_hal_rtc.o
-    0x08002360   0x08002360   0x000000b4   Code   RO         4855    i.HAL_RTC_Init      stm32l4xx_hal_rtc.o
-    0x08002414   0x08002414   0x0000002c   Code   RO         8556    i.HAL_RTC_MspInit   smtc_hal_rtc.o
-    0x08002440   0x08002440   0x00000218   Code   RO         4860    i.HAL_RTC_SetAlarm_IT  stm32l4xx_hal_rtc.o
-    0x08002658   0x08002658   0x000000cc   Code   RO         4861    i.HAL_RTC_SetDate   stm32l4xx_hal_rtc.o
-    0x08002724   0x08002724   0x000000f8   Code   RO         4862    i.HAL_RTC_SetTime   stm32l4xx_hal_rtc.o
-    0x0800281c   0x0800281c   0x00000038   Code   RO         4863    i.HAL_RTC_WaitForSynchro  stm32l4xx_hal_rtc.o
-    0x08002854   0x08002854   0x00000036   Code   RO         1378    i.HAL_SPI_DeInit    stm32l4xx_hal_spi.o
-    0x0800288a   0x0800288a   0x000000c0   Code   RO         1383    i.HAL_SPI_Init      stm32l4xx_hal_spi.o
+    0x08002170   0x08002170   0x00000038   Code   RO         5022    i.HAL_RTCEx_WakeUpTimerIRQHandler  stm32l4xx_hal_rtc_ex.o
+    0x080021a8   0x080021a8   0x0000000a   Code   RO         8549    i.HAL_RTC_AlarmAEventCallback  smtc_hal_rtc.o
+    0x080021b2   0x080021b2   0x00000106   Code   RO         4845    i.HAL_RTC_DeactivateAlarm  stm32l4xx_hal_rtc.o
+    0x080022b8   0x080022b8   0x0000004c   Code   RO         4847    i.HAL_RTC_GetDate   stm32l4xx_hal_rtc.o
+    0x08002304   0x08002304   0x0000005c   Code   RO         4849    i.HAL_RTC_GetTime   stm32l4xx_hal_rtc.o
+    0x08002360   0x08002360   0x000000b4   Code   RO         4850    i.HAL_RTC_Init      stm32l4xx_hal_rtc.o
+    0x08002414   0x08002414   0x0000002c   Code   RO         8551    i.HAL_RTC_MspInit   smtc_hal_rtc.o
+    0x08002440   0x08002440   0x00000218   Code   RO         4855    i.HAL_RTC_SetAlarm_IT  stm32l4xx_hal_rtc.o
+    0x08002658   0x08002658   0x000000cc   Code   RO         4856    i.HAL_RTC_SetDate   stm32l4xx_hal_rtc.o
+    0x08002724   0x08002724   0x000000f8   Code   RO         4857    i.HAL_RTC_SetTime   stm32l4xx_hal_rtc.o
+    0x0800281c   0x0800281c   0x00000038   Code   RO         4858    i.HAL_RTC_WaitForSynchro  stm32l4xx_hal_rtc.o
+    0x08002854   0x08002854   0x00000036   Code   RO         1373    i.HAL_SPI_DeInit    stm32l4xx_hal_spi.o
+    0x0800288a   0x0800288a   0x000000c0   Code   RO         1378    i.HAL_SPI_Init      stm32l4xx_hal_spi.o
     0x0800294a   0x0800294a   0x00000002   PAD
-    0x0800294c   0x0800294c   0x000000ac   Code   RO         8734    i.HAL_SPI_MspDeInit  smtc_hal_spi.o
-    0x080029f8   0x080029f8   0x00000114   Code   RO         8735    i.HAL_SPI_MspInit   smtc_hal_spi.o
-    0x08002b0c   0x08002b0c   0x00000028   Code   RO         4389    i.HAL_SYSTICK_CLKSourceConfig  stm32l4xx_hal_cortex.o
-    0x08002b34   0x08002b34   0x00000002   Code   RO         4390    i.HAL_SYSTICK_Callback  stm32l4xx_hal_cortex.o
-    0x08002b36   0x08002b36   0x00000034   Code   RO         4391    i.HAL_SYSTICK_Config  stm32l4xx_hal_cortex.o
-    0x08002b6a   0x08002b6a   0x00000008   Code   RO         4392    i.HAL_SYSTICK_IRQHandler  stm32l4xx_hal_cortex.o
-    0x08002b72   0x08002b72   0x00000002   Code   RO         3058    i.HAL_UARTEx_WakeupCallback  stm32l4xx_hal_uart_ex.o
-    0x08002b74   0x08002b74   0x00000042   Code   RO         2711    i.HAL_UART_DeInit   stm32l4xx_hal_uart.o
-    0x08002bb6   0x08002bb6   0x00000002   Code   RO         2712    i.HAL_UART_ErrorCallback  stm32l4xx_hal_uart.o
-    0x08002bb8   0x08002bb8   0x00000190   Code   RO         2715    i.HAL_UART_IRQHandler  stm32l4xx_hal_uart.o
-    0x08002d48   0x08002d48   0x00000074   Code   RO         2716    i.HAL_UART_Init     stm32l4xx_hal_uart.o
-    0x08002dbc   0x08002dbc   0x000000b4   Code   RO         8863    i.HAL_UART_MspDeInit  smtc_hal_uart.o
-    0x08002e70   0x08002e70   0x00000198   Code   RO         8864    i.HAL_UART_MspInit  smtc_hal_uart.o
-    0x08003008   0x08003008   0x000000d6   Code   RO         2724    i.HAL_UART_Transmit  stm32l4xx_hal_uart.o
-    0x080030de   0x080030de   0x00000002   Code   RO         2727    i.HAL_UART_TxCpltCallback  stm32l4xx_hal_uart.o
-    0x080030e0   0x080030e0   0x0000004c   Code   RO         8256    i.HardFault_Handler  smtc_hal_mcu.o
-    0x0800312c   0x0800312c   0x00000028   Code   RO         8790    i.LPTIM1_IRQHandler  smtc_hal_tmr.o
-    0x08003154   0x08003154   0x000001c2   Code   RO         1148    i.LPTIM_Disable     stm32l4xx_hal_lptim.o
+    0x0800294c   0x0800294c   0x000000ac   Code   RO         8729    i.HAL_SPI_MspDeInit  smtc_hal_spi.o
+    0x080029f8   0x080029f8   0x00000114   Code   RO         8730    i.HAL_SPI_MspInit   smtc_hal_spi.o
+    0x08002b0c   0x08002b0c   0x00000028   Code   RO         4384    i.HAL_SYSTICK_CLKSourceConfig  stm32l4xx_hal_cortex.o
+    0x08002b34   0x08002b34   0x00000002   Code   RO         4385    i.HAL_SYSTICK_Callback  stm32l4xx_hal_cortex.o
+    0x08002b36   0x08002b36   0x00000034   Code   RO         4386    i.HAL_SYSTICK_Config  stm32l4xx_hal_cortex.o
+    0x08002b6a   0x08002b6a   0x00000008   Code   RO         4387    i.HAL_SYSTICK_IRQHandler  stm32l4xx_hal_cortex.o
+    0x08002b72   0x08002b72   0x00000002   Code   RO         3053    i.HAL_UARTEx_WakeupCallback  stm32l4xx_hal_uart_ex.o
+    0x08002b74   0x08002b74   0x00000042   Code   RO         2706    i.HAL_UART_DeInit   stm32l4xx_hal_uart.o
+    0x08002bb6   0x08002bb6   0x00000002   Code   RO         2707    i.HAL_UART_ErrorCallback  stm32l4xx_hal_uart.o
+    0x08002bb8   0x08002bb8   0x00000190   Code   RO         2710    i.HAL_UART_IRQHandler  stm32l4xx_hal_uart.o
+    0x08002d48   0x08002d48   0x00000074   Code   RO         2711    i.HAL_UART_Init     stm32l4xx_hal_uart.o
+    0x08002dbc   0x08002dbc   0x000000b4   Code   RO         8858    i.HAL_UART_MspDeInit  smtc_hal_uart.o
+    0x08002e70   0x08002e70   0x00000198   Code   RO         8859    i.HAL_UART_MspInit  smtc_hal_uart.o
+    0x08003008   0x08003008   0x000000d6   Code   RO         2719    i.HAL_UART_Transmit  stm32l4xx_hal_uart.o
+    0x080030de   0x080030de   0x00000002   Code   RO         2722    i.HAL_UART_TxCpltCallback  stm32l4xx_hal_uart.o
+    0x080030e0   0x080030e0   0x0000004c   Code   RO         8251    i.HardFault_Handler  smtc_hal_mcu.o
+    0x0800312c   0x0800312c   0x00000028   Code   RO         8785    i.LPTIM1_IRQHandler  smtc_hal_tmr.o
+    0x08003154   0x08003154   0x000001c2   Code   RO         1143    i.LPTIM_Disable     stm32l4xx_hal_lptim.o
     0x08003316   0x08003316   0x00000002   PAD
-    0x08003318   0x08003318   0x00000064   Code   RO         8257    i.PVD_PVM_IRQHandler  smtc_hal_mcu.o
-    0x0800337c   0x0800337c   0x0000018c   Code   RO         3476    i.RCCEx_PLLSAI1_Config  stm32l4xx_hal_rcc_ex.o
-    0x08003508   0x08003508   0x00000164   Code   RO         3477    i.RCCEx_PLLSAI2_Config  stm32l4xx_hal_rcc_ex.o
-    0x0800366c   0x0800366c   0x0000009c   Code   RO         3369    i.RCC_SetFlashLatencyFromMSIRange  stm32l4xx_hal_rcc.o
-    0x08003708   0x08003708   0x00000040   Code   RO         8557    i.RTC_Alarm_IRQHandler  smtc_hal_rtc.o
-    0x08003748   0x08003748   0x00000014   Code   RO         4864    i.RTC_Bcd2ToByte    stm32l4xx_hal_rtc.o
-    0x0800375c   0x0800375c   0x0000001c   Code   RO         4865    i.RTC_ByteToBcd2    stm32l4xx_hal_rtc.o
-    0x08003778   0x08003778   0x00000044   Code   RO         4866    i.RTC_EnterInitMode  stm32l4xx_hal_rtc.o
-    0x080037bc   0x080037bc   0x00000068   Code   RO         4867    i.RTC_ExitInitMode  stm32l4xx_hal_rtc.o
-    0x08003824   0x08003824   0x00000010   Code   RO         8558    i.RTC_WKUP_IRQHandler  smtc_hal_rtc.o
-    0x08003834   0x08003834   0x0000000c   Code   RO         8258    i.SysTick_Handler   smtc_hal_mcu.o
-    0x08003840   0x08003840   0x00000050   Code   RO         5232    i.SystemInit        system_stm32l4xx.o
-    0x08003890   0x08003890   0x000000f8   Code   RO         2729    i.UART_AdvFeatureConfig  stm32l4xx_hal_uart.o
-    0x08003988   0x08003988   0x0000006e   Code   RO         2730    i.UART_CheckIdleState  stm32l4xx_hal_uart.o
-    0x080039f6   0x080039f6   0x00000018   Code   RO         2731    i.UART_DMAAbortOnError  stm32l4xx_hal_uart.o
-    0x08003a0e   0x08003a0e   0x00000022   Code   RO         2741    i.UART_EndRxTransfer  stm32l4xx_hal_uart.o
-    0x08003a30   0x08003a30   0x00000020   Code   RO         2742    i.UART_EndTransmit_IT  stm32l4xx_hal_uart.o
-    0x08003a50   0x08003a50   0x0000048a   Code   RO         2746    i.UART_SetConfig    stm32l4xx_hal_uart.o
-    0x08003eda   0x08003eda   0x00000068   Code   RO         2749    i.UART_WaitOnFlagUntilTimeout  stm32l4xx_hal_uart.o
+    0x08003318   0x08003318   0x00000064   Code   RO         8252    i.PVD_PVM_IRQHandler  smtc_hal_mcu.o
+    0x0800337c   0x0800337c   0x0000018c   Code   RO         3471    i.RCCEx_PLLSAI1_Config  stm32l4xx_hal_rcc_ex.o
+    0x08003508   0x08003508   0x00000164   Code   RO         3472    i.RCCEx_PLLSAI2_Config  stm32l4xx_hal_rcc_ex.o
+    0x0800366c   0x0800366c   0x0000009c   Code   RO         3364    i.RCC_SetFlashLatencyFromMSIRange  stm32l4xx_hal_rcc.o
+    0x08003708   0x08003708   0x00000040   Code   RO         8552    i.RTC_Alarm_IRQHandler  smtc_hal_rtc.o
+    0x08003748   0x08003748   0x00000014   Code   RO         4859    i.RTC_Bcd2ToByte    stm32l4xx_hal_rtc.o
+    0x0800375c   0x0800375c   0x0000001c   Code   RO         4860    i.RTC_ByteToBcd2    stm32l4xx_hal_rtc.o
+    0x08003778   0x08003778   0x00000044   Code   RO         4861    i.RTC_EnterInitMode  stm32l4xx_hal_rtc.o
+    0x080037bc   0x080037bc   0x00000068   Code   RO         4862    i.RTC_ExitInitMode  stm32l4xx_hal_rtc.o
+    0x08003824   0x08003824   0x00000010   Code   RO         8553    i.RTC_WKUP_IRQHandler  smtc_hal_rtc.o
+    0x08003834   0x08003834   0x0000000c   Code   RO         8253    i.SysTick_Handler   smtc_hal_mcu.o
+    0x08003840   0x08003840   0x00000050   Code   RO         5227    i.SystemInit        system_stm32l4xx.o
+    0x08003890   0x08003890   0x000000f8   Code   RO         2724    i.UART_AdvFeatureConfig  stm32l4xx_hal_uart.o
+    0x08003988   0x08003988   0x0000006e   Code   RO         2725    i.UART_CheckIdleState  stm32l4xx_hal_uart.o
+    0x080039f6   0x080039f6   0x00000018   Code   RO         2726    i.UART_DMAAbortOnError  stm32l4xx_hal_uart.o
+    0x08003a0e   0x08003a0e   0x00000022   Code   RO         2736    i.UART_EndRxTransfer  stm32l4xx_hal_uart.o
+    0x08003a30   0x08003a30   0x00000020   Code   RO         2737    i.UART_EndTransmit_IT  stm32l4xx_hal_uart.o
+    0x08003a50   0x08003a50   0x0000048a   Code   RO         2741    i.UART_SetConfig    stm32l4xx_hal_uart.o
+    0x08003eda   0x08003eda   0x00000068   Code   RO         2744    i.UART_WaitOnFlagUntilTimeout  stm32l4xx_hal_uart.o
     0x08003f42   0x08003f42   0x00000002   PAD
-    0x08003f44   0x08003f44   0x00000010   Code   RO         8866    i.USART1_IRQHandler  smtc_hal_uart.o
-    0x08003f54   0x08003f54   0x00000010   Code   RO         8867    i.USART2_IRQHandler  smtc_hal_uart.o
-    0x08003f64   0x08003f64   0x00000010   Code   RO         8868    i.USART3_IRQHandler  smtc_hal_uart.o
-    0x08003f74   0x08003f74   0x00000024   Code   RO         9115    i.__0vsprintf       mc_w.l(printfa.o)
-    0x08003f98   0x08003f98   0x00000010   Code   RO         4393    i.__NVIC_GetPriorityGrouping  stm32l4xx_hal_cortex.o
-    0x08003fa8   0x08003fa8   0x00000028   Code   RO         4394    i.__NVIC_SetPriority  stm32l4xx_hal_cortex.o
-    0x08003fd0   0x08003fd0   0x0000000e   Code   RO         9190    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08003fde   0x08003fde   0x00000002   Code   RO         9191    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08003fe0   0x08003fe0   0x0000000e   Code   RO         9192    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08003f44   0x08003f44   0x00000010   Code   RO         8861    i.USART1_IRQHandler  smtc_hal_uart.o
+    0x08003f54   0x08003f54   0x00000010   Code   RO         8862    i.USART2_IRQHandler  smtc_hal_uart.o
+    0x08003f64   0x08003f64   0x00000010   Code   RO         8863    i.USART3_IRQHandler  smtc_hal_uart.o
+    0x08003f74   0x08003f74   0x00000024   Code   RO         9110    i.__0vsprintf       mc_w.l(printfa.o)
+    0x08003f98   0x08003f98   0x00000010   Code   RO         4388    i.__NVIC_GetPriorityGrouping  stm32l4xx_hal_cortex.o
+    0x08003fa8   0x08003fa8   0x00000028   Code   RO         4389    i.__NVIC_SetPriority  stm32l4xx_hal_cortex.o
+    0x08003fd0   0x08003fd0   0x0000000e   Code   RO         9185    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08003fde   0x08003fde   0x00000002   Code   RO         9186    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08003fe0   0x08003fe0   0x0000000e   Code   RO         9187    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x08003fee   0x08003fee   0x00000002   PAD
-    0x08003ff0   0x08003ff0   0x0000018a   Code   RO         9116    i._fp_digits        mc_w.l(printfa.o)
+    0x08003ff0   0x08003ff0   0x0000018a   Code   RO         9111    i._fp_digits        mc_w.l(printfa.o)
     0x0800417a   0x0800417a   0x00000002   PAD
-    0x0800417c   0x0800417c   0x000006e2   Code   RO         9117    i._printf_core      mc_w.l(printfa.o)
-    0x0800485e   0x0800485e   0x00000024   Code   RO         9118    i._printf_post_padding  mc_w.l(printfa.o)
-    0x08004882   0x08004882   0x0000002e   Code   RO         9119    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x080048b0   0x080048b0   0x0000000a   Code   RO         9121    i._sputc            mc_w.l(printfa.o)
+    0x0800417c   0x0800417c   0x000006e2   Code   RO         9112    i._printf_core      mc_w.l(printfa.o)
+    0x0800485e   0x0800485e   0x00000024   Code   RO         9113    i._printf_post_padding  mc_w.l(printfa.o)
+    0x08004882   0x08004882   0x0000002e   Code   RO         9114    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x080048b0   0x080048b0   0x0000000a   Code   RO         9116    i._sputc            mc_w.l(printfa.o)
     0x080048ba   0x080048ba   0x00000002   PAD
     0x080048bc   0x080048bc   0x000000b0   Code   RO           14    i.add_payload_in_streaming_fifo  main_tracker.o
-    0x0800496c   0x0800496c   0x000002d0   Code   RO           16    i.build_and_stream_payload  main_tracker.o
-    0x08004c3c   0x08004c3c   0x00000012   Code   RO         6023    i.external_supply_deinit  external_supply.o
-    0x08004c4e   0x08004c4e   0x00000014   Code   RO         6024    i.external_supply_init  external_supply.o
+    0x0800496c   0x0800496c   0x000002d0   Code   RO           15    i.build_and_stream_payload  main_tracker.o
+    0x08004c3c   0x08004c3c   0x00000012   Code   RO         6018    i.external_supply_deinit  external_supply.o
+    0x08004c4e   0x08004c4e   0x00000014   Code   RO         6019    i.external_supply_init  external_supply.o
     0x08004c62   0x08004c62   0x00000002   PAD
-    0x08004c64   0x08004c64   0x0000001c   Code   RO           17    i.gnss_init         main_tracker.o
-    0x08004c80   0x08004c80   0x0000003c   Code   RO         6313    i.gnss_scan_configure  gnss_scan.o
-    0x08004cbc   0x08004cbc   0x00000100   Code   RO         6314    i.gnss_scan_display_results  gnss_scan.o
-    0x08004dbc   0x08004dbc   0x00000104   Code   RO         6315    i.gnss_scan_execute  gnss_scan.o
-    0x08004ec0   0x08004ec0   0x00000048   Code   RO         6316    i.gnss_scan_init    gnss_scan.o
-    0x08004f08   0x08004f08   0x00000018   Code   RO         6317    i.gnss_scan_set_type  gnss_scan.o
-    0x08004f20   0x08004f20   0x00000028   Code   RO         8027    i.hal_gpio_deinit   smtc_hal_gpio.o
-    0x08004f48   0x08004f48   0x0000002a   Code   RO         8028    i.hal_gpio_get_value  smtc_hal_gpio.o
+    0x08004c64   0x08004c64   0x0000001c   Code   RO           16    i.gnss_init         main_tracker.o
+    0x08004c80   0x08004c80   0x0000003c   Code   RO         6308    i.gnss_scan_configure  gnss_scan.o
+    0x08004cbc   0x08004cbc   0x00000100   Code   RO         6309    i.gnss_scan_display_results  gnss_scan.o
+    0x08004dbc   0x08004dbc   0x00000104   Code   RO         6310    i.gnss_scan_execute  gnss_scan.o
+    0x08004ec0   0x08004ec0   0x00000048   Code   RO         6311    i.gnss_scan_init    gnss_scan.o
+    0x08004f08   0x08004f08   0x00000018   Code   RO         6312    i.gnss_scan_set_type  gnss_scan.o
+    0x08004f20   0x08004f20   0x00000028   Code   RO         8022    i.hal_gpio_deinit   smtc_hal_gpio.o
+    0x08004f48   0x08004f48   0x0000002a   Code   RO         8023    i.hal_gpio_get_value  smtc_hal_gpio.o
     0x08004f72   0x08004f72   0x00000002   PAD
-    0x08004f74   0x08004f74   0x000001fc   Code   RO         8029    i.hal_gpio_init     smtc_hal_gpio.o
-    0x08005170   0x08005170   0x00000054   Code   RO         8030    i.hal_gpio_init_in  smtc_hal_gpio.o
-    0x080051c4   0x080051c4   0x00000030   Code   RO         8031    i.hal_gpio_init_out  smtc_hal_gpio.o
-    0x080051f4   0x080051f4   0x00000018   Code   RO         8032    i.hal_gpio_irq_attach  smtc_hal_gpio.o
-    0x0800520c   0x0800520c   0x0000002e   Code   RO         8037    i.hal_gpio_set_value  smtc_hal_gpio.o
-    0x0800523a   0x0800523a   0x0000000c   Code   RO         8259    i.hal_mcu_critical_section_begin  smtc_hal_mcu.o
-    0x08005246   0x08005246   0x0000000a   Code   RO         8260    i.hal_mcu_critical_section_end  smtc_hal_mcu.o
-    0x08005250   0x08005250   0x0000001c   Code   RO         8261    i.hal_mcu_deinit    smtc_hal_mcu.o
-    0x0800526c   0x0800526c   0x00000012   Code   RO         8262    i.hal_mcu_deinit_periph  smtc_hal_mcu.o
+    0x08004f74   0x08004f74   0x000001fc   Code   RO         8024    i.hal_gpio_init     smtc_hal_gpio.o
+    0x08005170   0x08005170   0x00000054   Code   RO         8025    i.hal_gpio_init_in  smtc_hal_gpio.o
+    0x080051c4   0x080051c4   0x00000030   Code   RO         8026    i.hal_gpio_init_out  smtc_hal_gpio.o
+    0x080051f4   0x080051f4   0x00000018   Code   RO         8027    i.hal_gpio_irq_attach  smtc_hal_gpio.o
+    0x0800520c   0x0800520c   0x0000002e   Code   RO         8032    i.hal_gpio_set_value  smtc_hal_gpio.o
+    0x0800523a   0x0800523a   0x0000000c   Code   RO         8254    i.hal_mcu_critical_section_begin  smtc_hal_mcu.o
+    0x08005246   0x08005246   0x0000000a   Code   RO         8255    i.hal_mcu_critical_section_end  smtc_hal_mcu.o
+    0x08005250   0x08005250   0x0000001c   Code   RO         8256    i.hal_mcu_deinit    smtc_hal_mcu.o
+    0x0800526c   0x0800526c   0x00000012   Code   RO         8257    i.hal_mcu_deinit_periph  smtc_hal_mcu.o
     0x0800527e   0x0800527e   0x00000002   PAD
-    0x08005280   0x08005280   0x00000044   Code   RO         8269    i.hal_mcu_gpio_deinit  smtc_hal_mcu.o
-    0x080052c4   0x080052c4   0x00000098   Code   RO         8270    i.hal_mcu_gpio_init  smtc_hal_mcu.o
-    0x0800535c   0x0800535c   0x00000044   Code   RO         8271    i.hal_mcu_init      smtc_hal_mcu.o
-    0x080053a0   0x080053a0   0x0000000e   Code   RO         8272    i.hal_mcu_init_periph  smtc_hal_mcu.o
+    0x08005280   0x08005280   0x00000044   Code   RO         8264    i.hal_mcu_gpio_deinit  smtc_hal_mcu.o
+    0x080052c4   0x080052c4   0x00000098   Code   RO         8265    i.hal_mcu_gpio_init  smtc_hal_mcu.o
+    0x0800535c   0x0800535c   0x00000044   Code   RO         8266    i.hal_mcu_init      smtc_hal_mcu.o
+    0x080053a0   0x080053a0   0x0000000e   Code   RO         8267    i.hal_mcu_init_periph  smtc_hal_mcu.o
     0x080053ae   0x080053ae   0x00000002   PAD
-    0x080053b0   0x080053b0   0x00000024   Code   RO         8273    i.hal_mcu_init_software_watchdog  smtc_hal_mcu.o
-    0x080053d4   0x080053d4   0x00000010   Code   RO         8274    i.hal_mcu_low_power_handler  smtc_hal_mcu.o
-    0x080053e4   0x080053e4   0x00000030   Code   RO         8275    i.hal_mcu_lpm_enter_stop_mode  smtc_hal_mcu.o
-    0x08005414   0x08005414   0x00000024   Code   RO         8276    i.hal_mcu_lpm_exit_stop_mode  smtc_hal_mcu.o
-    0x08005438   0x08005438   0x00000070   Code   RO         8277    i.hal_mcu_panic     smtc_hal_mcu.o
-    0x080054a8   0x080054a8   0x0000000c   Code   RO         8278    i.hal_mcu_partial_sleep_enable  smtc_hal_mcu.o
-    0x080054b4   0x080054b4   0x0000002c   Code   RO         8279    i.hal_mcu_pvd_config  smtc_hal_mcu.o
-    0x080054e0   0x080054e0   0x00000028   Code   RO         8280    i.hal_mcu_reinit    smtc_hal_mcu.o
-    0x08005508   0x08005508   0x0000000e   Code   RO         8281    i.hal_mcu_reinit_periph  smtc_hal_mcu.o
+    0x080053b0   0x080053b0   0x00000024   Code   RO         8268    i.hal_mcu_init_software_watchdog  smtc_hal_mcu.o
+    0x080053d4   0x080053d4   0x00000010   Code   RO         8269    i.hal_mcu_low_power_handler  smtc_hal_mcu.o
+    0x080053e4   0x080053e4   0x00000030   Code   RO         8270    i.hal_mcu_lpm_enter_stop_mode  smtc_hal_mcu.o
+    0x08005414   0x08005414   0x00000024   Code   RO         8271    i.hal_mcu_lpm_exit_stop_mode  smtc_hal_mcu.o
+    0x08005438   0x08005438   0x00000070   Code   RO         8272    i.hal_mcu_panic     smtc_hal_mcu.o
+    0x080054a8   0x080054a8   0x0000000c   Code   RO         8273    i.hal_mcu_partial_sleep_enable  smtc_hal_mcu.o
+    0x080054b4   0x080054b4   0x0000002c   Code   RO         8274    i.hal_mcu_pvd_config  smtc_hal_mcu.o
+    0x080054e0   0x080054e0   0x00000028   Code   RO         8275    i.hal_mcu_reinit    smtc_hal_mcu.o
+    0x08005508   0x08005508   0x0000000e   Code   RO         8276    i.hal_mcu_reinit_periph  smtc_hal_mcu.o
     0x08005516   0x08005516   0x00000002   PAD
-    0x08005518   0x08005518   0x00000048   Code   RO         8282    i.hal_mcu_reset     smtc_hal_mcu.o
-    0x08005560   0x08005560   0x00000010   Code   RO         8283    i.hal_mcu_reset_software_watchdog  smtc_hal_mcu.o
-    0x08005570   0x08005570   0x000000ec   Code   RO         8286    i.hal_mcu_system_clock_config  smtc_hal_mcu.o
-    0x0800565c   0x0800565c   0x000000cc   Code   RO         8287    i.hal_mcu_system_clock_re_config_after_stop  smtc_hal_mcu.o
-    0x08005728   0x08005728   0x0000001a   Code   RO         8288    i.hal_mcu_trace_print  smtc_hal_mcu.o
-    0x08005742   0x08005742   0x0000002e   Code   RO         8560    i.hal_rtc_get_calendar_time  smtc_hal_rtc.o
-    0x08005770   0x08005770   0x00000004   Code   RO         8561    i.hal_rtc_get_minimum_timeout  smtc_hal_rtc.o
-    0x08005774   0x08005774   0x00000022   Code   RO         8562    i.hal_rtc_get_time_ms  smtc_hal_rtc.o
+    0x08005518   0x08005518   0x00000048   Code   RO         8277    i.hal_mcu_reset     smtc_hal_mcu.o
+    0x08005560   0x08005560   0x00000010   Code   RO         8278    i.hal_mcu_reset_software_watchdog  smtc_hal_mcu.o
+    0x08005570   0x08005570   0x000000ec   Code   RO         8281    i.hal_mcu_system_clock_config  smtc_hal_mcu.o
+    0x0800565c   0x0800565c   0x000000cc   Code   RO         8282    i.hal_mcu_system_clock_re_config_after_stop  smtc_hal_mcu.o
+    0x08005728   0x08005728   0x0000001a   Code   RO         8283    i.hal_mcu_trace_print  smtc_hal_mcu.o
+    0x08005742   0x08005742   0x0000002e   Code   RO         8555    i.hal_rtc_get_calendar_time  smtc_hal_rtc.o
+    0x08005770   0x08005770   0x00000004   Code   RO         8556    i.hal_rtc_get_minimum_timeout  smtc_hal_rtc.o
+    0x08005774   0x08005774   0x00000022   Code   RO         8557    i.hal_rtc_get_time_ms  smtc_hal_rtc.o
     0x08005796   0x08005796   0x00000002   PAD
-    0x08005798   0x08005798   0x0000000c   Code   RO         8563    i.hal_rtc_get_time_ref_in_ticks  smtc_hal_rtc.o
-    0x080057a4   0x080057a4   0x0000001c   Code   RO         8565    i.hal_rtc_get_timer_elapsed_value  smtc_hal_rtc.o
-    0x080057c0   0x080057c0   0x000000b4   Code   RO         8567    i.hal_rtc_init      smtc_hal_rtc.o
-    0x08005874   0x08005874   0x00000018   Code   RO         8568    i.hal_rtc_ms_2_tick  smtc_hal_rtc.o
-    0x0800588c   0x0800588c   0x0000001c   Code   RO         8571    i.hal_rtc_set_time_ref_in_ticks  smtc_hal_rtc.o
-    0x080058a8   0x080058a8   0x00000180   Code   RO         8572    i.hal_rtc_start_alarm  smtc_hal_rtc.o
-    0x08005a28   0x08005a28   0x00000034   Code   RO         8573    i.hal_rtc_stop_alarm  smtc_hal_rtc.o
-    0x08005a5c   0x08005a5c   0x0000001e   Code   RO         8576    i.hal_rtc_tick_2_ms  smtc_hal_rtc.o
+    0x08005798   0x08005798   0x0000000c   Code   RO         8558    i.hal_rtc_get_time_ref_in_ticks  smtc_hal_rtc.o
+    0x080057a4   0x080057a4   0x0000001c   Code   RO         8560    i.hal_rtc_get_timer_elapsed_value  smtc_hal_rtc.o
+    0x080057c0   0x080057c0   0x000000b4   Code   RO         8562    i.hal_rtc_init      smtc_hal_rtc.o
+    0x08005874   0x08005874   0x00000018   Code   RO         8563    i.hal_rtc_ms_2_tick  smtc_hal_rtc.o
+    0x0800588c   0x0800588c   0x0000001c   Code   RO         8566    i.hal_rtc_set_time_ref_in_ticks  smtc_hal_rtc.o
+    0x080058a8   0x080058a8   0x00000180   Code   RO         8567    i.hal_rtc_start_alarm  smtc_hal_rtc.o
+    0x08005a28   0x08005a28   0x00000034   Code   RO         8568    i.hal_rtc_stop_alarm  smtc_hal_rtc.o
+    0x08005a5c   0x08005a5c   0x0000001e   Code   RO         8571    i.hal_rtc_tick_2_ms  smtc_hal_rtc.o
     0x08005a7a   0x08005a7a   0x00000002   PAD
-    0x08005a7c   0x08005a7c   0x0000001c   Code   RO         8736    i.hal_spi_deinit    smtc_hal_spi.o
-    0x08005a98   0x08005a98   0x00000068   Code   RO         8737    i.hal_spi_in_out    smtc_hal_spi.o
-    0x08005b00   0x08005b00   0x0000010c   Code   RO         8738    i.hal_spi_init      smtc_hal_spi.o
-    0x08005c0c   0x08005c0c   0x00000048   Code   RO         8792    i.hal_tmr_init      smtc_hal_tmr.o
-    0x08005c54   0x08005c54   0x0000001c   Code   RO         8869    i.hal_uart_deinit   smtc_hal_uart.o
-    0x08005c70   0x08005c70   0x000000dc   Code   RO         8870    i.hal_uart_init     smtc_hal_uart.o
-    0x08005d4c   0x08005d4c   0x0000002c   Code   RO         8872    i.hal_uart_tx       smtc_hal_uart.o
-    0x08005d78   0x08005d78   0x00000092   Code   RO         7354    i.interpret_basic_complete_result_from_buffer  lr1110_modem_wifi.o
-    0x08005e0a   0x08005e0a   0x00000052   Code   RO         7355    i.interpret_basic_mac_type_channel_result_from_buffer  lr1110_modem_wifi.o
-    0x08005e5c   0x08005e5c   0x00000030   Code   RO           18    i.is_next_scan_possible  main_tracker.o
-    0x08005e8c   0x08005e8c   0x000000cc   Code   RO           20    i.join_network      main_tracker.o
-    0x08005f58   0x08005f58   0x0000003e   Code   RO         5969    i.leds_blink        leds.o
-    0x08005f96   0x08005f96   0x00000010   Code   RO         5970    i.leds_deinit       leds.o
-    0x08005fa6   0x08005fa6   0x00000014   Code   RO         5971    i.leds_init         leds.o
-    0x08005fba   0x08005fba   0x00000022   Code   RO         5972    i.leds_off          leds.o
-    0x08005fdc   0x08005fdc   0x00000022   Code   RO         5973    i.leds_on           leds.o
-    0x08005ffe   0x08005ffe   0x0000000c   Code   RO         6025    i.lna_off           external_supply.o
-    0x0800600a   0x0800600a   0x0000000c   Code   RO         6026    i.lna_on            external_supply.o
+    0x08005a7c   0x08005a7c   0x0000001c   Code   RO         8731    i.hal_spi_deinit    smtc_hal_spi.o
+    0x08005a98   0x08005a98   0x00000068   Code   RO         8732    i.hal_spi_in_out    smtc_hal_spi.o
+    0x08005b00   0x08005b00   0x0000010c   Code   RO         8733    i.hal_spi_init      smtc_hal_spi.o
+    0x08005c0c   0x08005c0c   0x00000048   Code   RO         8787    i.hal_tmr_init      smtc_hal_tmr.o
+    0x08005c54   0x08005c54   0x0000001c   Code   RO         8864    i.hal_uart_deinit   smtc_hal_uart.o
+    0x08005c70   0x08005c70   0x000000dc   Code   RO         8865    i.hal_uart_init     smtc_hal_uart.o
+    0x08005d4c   0x08005d4c   0x0000002c   Code   RO         8867    i.hal_uart_tx       smtc_hal_uart.o
+    0x08005d78   0x08005d78   0x00000092   Code   RO         7349    i.interpret_basic_complete_result_from_buffer  lr1110_modem_wifi.o
+    0x08005e0a   0x08005e0a   0x00000052   Code   RO         7350    i.interpret_basic_mac_type_channel_result_from_buffer  lr1110_modem_wifi.o
+    0x08005e5c   0x08005e5c   0x00000030   Code   RO           17    i.is_next_scan_possible  main_tracker.o
+    0x08005e8c   0x08005e8c   0x000000cc   Code   RO           19    i.join_network      main_tracker.o
+    0x08005f58   0x08005f58   0x0000003e   Code   RO         5964    i.leds_blink        leds.o
+    0x08005f96   0x08005f96   0x00000010   Code   RO         5965    i.leds_deinit       leds.o
+    0x08005fa6   0x08005fa6   0x00000014   Code   RO         5966    i.leds_init         leds.o
+    0x08005fba   0x08005fba   0x00000022   Code   RO         5967    i.leds_off          leds.o
+    0x08005fdc   0x08005fdc   0x00000022   Code   RO         5968    i.leds_on           leds.o
+    0x08005ffe   0x08005ffe   0x0000000c   Code   RO         6020    i.lna_off           external_supply.o
+    0x0800600a   0x0800600a   0x0000000c   Code   RO         6021    i.lna_on            external_supply.o
     0x08006016   0x08006016   0x00000002   PAD
-    0x08006018   0x08006018   0x00000098   Code   RO           21    i.lorawan_init      main_tracker.o
-    0x080060b0   0x080060b0   0x00000130   Code   RO         6189    i.lr1110_display_wifi_scan_results  wifi_scan.o
-    0x080061e0   0x080061e0   0x0000003c   Code   RO           22    i.lr1110_modem_adr_mobile_to_static  main_tracker.o
-    0x0800621c   0x0800621c   0x00000154   Code   RO           23    i.lr1110_modem_alarm  main_tracker.o
-    0x08006370   0x08006370   0x00000054   Code   RO         7840    i.lr1110_modem_board_deinit_io  lr1110-modem-board.o
-    0x080063c4   0x080063c4   0x00000018   Code   RO         7842    i.lr1110_modem_board_get_systime_from_gps  lr1110-modem-board.o
-    0x080063dc   0x080063dc   0x00000006   Code   RO         7843    i.lr1110_modem_board_get_tcxo_wakeup_time  lr1110-modem-board.o
-    0x080063e2   0x080063e2   0x00000070   Code   RO         7844    i.lr1110_modem_board_init  lr1110-modem-board.o
-    0x08006452   0x08006452   0x00000038   Code   RO         7845    i.lr1110_modem_board_init_io  lr1110-modem-board.o
+    0x08006018   0x08006018   0x00000098   Code   RO           20    i.lorawan_init      main_tracker.o
+    0x080060b0   0x080060b0   0x00000130   Code   RO         6184    i.lr1110_display_wifi_scan_results  wifi_scan.o
+    0x080061e0   0x080061e0   0x0000003c   Code   RO           21    i.lr1110_modem_adr_mobile_to_static  main_tracker.o
+    0x0800621c   0x0800621c   0x00000154   Code   RO           22    i.lr1110_modem_alarm  main_tracker.o
+    0x08006370   0x08006370   0x00000054   Code   RO         7835    i.lr1110_modem_board_deinit_io  lr1110-modem-board.o
+    0x080063c4   0x080063c4   0x00000018   Code   RO         7837    i.lr1110_modem_board_get_systime_from_gps  lr1110-modem-board.o
+    0x080063dc   0x080063dc   0x00000006   Code   RO         7838    i.lr1110_modem_board_get_tcxo_wakeup_time  lr1110-modem-board.o
+    0x080063e2   0x080063e2   0x00000070   Code   RO         7839    i.lr1110_modem_board_init  lr1110-modem-board.o
+    0x08006452   0x08006452   0x00000038   Code   RO         7840    i.lr1110_modem_board_init_io  lr1110-modem-board.o
     0x0800648a   0x0800648a   0x00000002   PAD
-    0x0800648c   0x0800648c   0x00000034   Code   RO         7846    i.lr1110_modem_board_init_io_context  lr1110-modem-board.o
-    0x080064c0   0x080064c0   0x00000048   Code   RO         7847    i.lr1110_modem_board_init_tcxo_io  lr1110-modem-board.o
-    0x08006508   0x08006508   0x0000000c   Code   RO         7848    i.lr1110_modem_board_is_ready  lr1110-modem-board.o
-    0x08006514   0x08006514   0x00000008   Code   RO         7849    i.lr1110_modem_board_lna_off  lr1110-modem-board.o
-    0x0800651c   0x0800651c   0x00000008   Code   RO         7850    i.lr1110_modem_board_lna_on  lr1110-modem-board.o
-    0x08006524   0x08006524   0x00000016   Code   RO         7851    i.lr1110_modem_board_read_event_line  lr1110-modem-board.o
+    0x0800648c   0x0800648c   0x00000034   Code   RO         7841    i.lr1110_modem_board_init_io_context  lr1110-modem-board.o
+    0x080064c0   0x080064c0   0x00000048   Code   RO         7842    i.lr1110_modem_board_init_tcxo_io  lr1110-modem-board.o
+    0x08006508   0x08006508   0x0000000c   Code   RO         7843    i.lr1110_modem_board_is_ready  lr1110-modem-board.o
+    0x08006514   0x08006514   0x00000008   Code   RO         7844    i.lr1110_modem_board_lna_off  lr1110-modem-board.o
+    0x0800651c   0x0800651c   0x00000008   Code   RO         7845    i.lr1110_modem_board_lna_on  lr1110-modem-board.o
+    0x08006524   0x08006524   0x00000016   Code   RO         7846    i.lr1110_modem_board_read_event_line  lr1110-modem-board.o
     0x0800653a   0x0800653a   0x00000002   PAD
-    0x0800653c   0x0800653c   0x0000000c   Code   RO         7852    i.lr1110_modem_board_set_ready  lr1110-modem-board.o
-    0x08006548   0x08006548   0x00000038   Code   RO         6439    i.lr1110_modem_compute_crc  lr1110_modem_hal.o
-    0x08006580   0x08006580   0x00000022   Code   RO         6803    i.lr1110_modem_derive_keys  lr1110_modem_lorawan.o
+    0x0800653c   0x0800653c   0x0000000c   Code   RO         7847    i.lr1110_modem_board_set_ready  lr1110-modem-board.o
+    0x08006548   0x08006548   0x00000038   Code   RO         6434    i.lr1110_modem_compute_crc  lr1110_modem_hal.o
+    0x08006580   0x08006580   0x00000022   Code   RO         6798    i.lr1110_modem_derive_keys  lr1110_modem_lorawan.o
     0x080065a2   0x080065a2   0x00000002   PAD
-    0x080065a4   0x080065a4   0x00000148   Code   RO           24    i.lr1110_modem_down_data  main_tracker.o
-    0x080066ec   0x080066ec   0x000002ac   Code   RO         6388    i.lr1110_modem_event_process  lr1110.o
-    0x08006998   0x08006998   0x00000008   Code   RO         7356    i.lr1110_modem_extract_channel_from_info_byte  lr1110_modem_wifi.o
-    0x080069a0   0x080069a0   0x00000008   Code   RO         7357    i.lr1110_modem_extract_signal_type_from_data_rate_info  lr1110_modem_wifi.o
-    0x080069a8   0x080069a8   0x00000024   Code   RO         6805    i.lr1110_modem_get_adr_profile  lr1110_modem_lorawan.o
-    0x080069cc   0x080069cc   0x0000004a   Code   RO         6809    i.lr1110_modem_get_charge  lr1110_modem_lorawan.o
-    0x08006a16   0x08006a16   0x00000042   Code   RO         6810    i.lr1110_modem_get_chip_eui  lr1110_modem_lorawan.o
-    0x08006a58   0x08006a58   0x00000068   Code   RO         6819    i.lr1110_modem_get_event  lr1110_modem_lorawan.o
-    0x08006ac0   0x08006ac0   0x0000003a   Code   RO         6820    i.lr1110_modem_get_event_size  lr1110_modem_lorawan.o
-    0x08006afa   0x08006afa   0x0000004a   Code   RO         6821    i.lr1110_modem_get_gps_time  lr1110_modem_lorawan.o
-    0x08006b44   0x08006b44   0x0000004a   Code   RO         6825    i.lr1110_modem_get_pin  lr1110_modem_lorawan.o
-    0x08006b8e   0x08006b8e   0x00000024   Code   RO         6827    i.lr1110_modem_get_status  lr1110_modem_lorawan.o
-    0x08006bb2   0x08006bb2   0x0000007c   Code   RO         6829    i.lr1110_modem_get_version  lr1110_modem_lorawan.o
-    0x08006c2e   0x08006c2e   0x00000072   Code   RO         6658    i.lr1110_modem_gnss_get_detected_satellites  lr1110_modem_gnss.o
-    0x08006ca0   0x08006ca0   0x00000028   Code   RO         6659    i.lr1110_modem_gnss_get_nb_detected_satellites  lr1110_modem_gnss.o
-    0x08006cc8   0x08006cc8   0x00000024   Code   RO         6662    i.lr1110_modem_gnss_push_solver_msg  lr1110_modem_gnss.o
-    0x08006cec   0x08006cec   0x00000034   Code   RO         6670    i.lr1110_modem_gnss_scan_assisted_md  lr1110_modem_gnss.o
-    0x08006d20   0x08006d20   0x00000034   Code   RO         6671    i.lr1110_modem_gnss_scan_autonomous_md  lr1110_modem_gnss.o
-    0x08006d54   0x08006d54   0x00000028   Code   RO         6318    i.lr1110_modem_gnss_scan_done  gnss_scan.o
-    0x08006d7c   0x08006d7c   0x00000084   Code   RO         6673    i.lr1110_modem_gnss_set_assistance_position  lr1110_modem_gnss.o
-    0x08006e00   0x08006e00   0x00000026   Code   RO         6674    i.lr1110_modem_gnss_set_constellations_to_use  lr1110_modem_gnss.o
-    0x08006e26   0x08006e26   0x00000108   Code   RO         6441    i.lr1110_modem_hal_read  lr1110_modem_hal.o
+    0x080065a4   0x080065a4   0x00000148   Code   RO           23    i.lr1110_modem_down_data  main_tracker.o
+    0x080066ec   0x080066ec   0x000002ac   Code   RO         6383    i.lr1110_modem_event_process  lr1110.o
+    0x08006998   0x08006998   0x00000008   Code   RO         7351    i.lr1110_modem_extract_channel_from_info_byte  lr1110_modem_wifi.o
+    0x080069a0   0x080069a0   0x00000008   Code   RO         7352    i.lr1110_modem_extract_signal_type_from_data_rate_info  lr1110_modem_wifi.o
+    0x080069a8   0x080069a8   0x00000024   Code   RO         6800    i.lr1110_modem_get_adr_profile  lr1110_modem_lorawan.o
+    0x080069cc   0x080069cc   0x0000004a   Code   RO         6804    i.lr1110_modem_get_charge  lr1110_modem_lorawan.o
+    0x08006a16   0x08006a16   0x00000042   Code   RO         6805    i.lr1110_modem_get_chip_eui  lr1110_modem_lorawan.o
+    0x08006a58   0x08006a58   0x00000068   Code   RO         6814    i.lr1110_modem_get_event  lr1110_modem_lorawan.o
+    0x08006ac0   0x08006ac0   0x0000003a   Code   RO         6815    i.lr1110_modem_get_event_size  lr1110_modem_lorawan.o
+    0x08006afa   0x08006afa   0x0000004a   Code   RO         6816    i.lr1110_modem_get_gps_time  lr1110_modem_lorawan.o
+    0x08006b44   0x08006b44   0x0000004a   Code   RO         6820    i.lr1110_modem_get_pin  lr1110_modem_lorawan.o
+    0x08006b8e   0x08006b8e   0x00000024   Code   RO         6822    i.lr1110_modem_get_status  lr1110_modem_lorawan.o
+    0x08006bb2   0x08006bb2   0x0000007c   Code   RO         6824    i.lr1110_modem_get_version  lr1110_modem_lorawan.o
+    0x08006c2e   0x08006c2e   0x00000072   Code   RO         6653    i.lr1110_modem_gnss_get_detected_satellites  lr1110_modem_gnss.o
+    0x08006ca0   0x08006ca0   0x00000028   Code   RO         6654    i.lr1110_modem_gnss_get_nb_detected_satellites  lr1110_modem_gnss.o
+    0x08006cc8   0x08006cc8   0x00000024   Code   RO         6657    i.lr1110_modem_gnss_push_solver_msg  lr1110_modem_gnss.o
+    0x08006cec   0x08006cec   0x00000034   Code   RO         6665    i.lr1110_modem_gnss_scan_assisted_md  lr1110_modem_gnss.o
+    0x08006d20   0x08006d20   0x00000034   Code   RO         6666    i.lr1110_modem_gnss_scan_autonomous_md  lr1110_modem_gnss.o
+    0x08006d54   0x08006d54   0x00000028   Code   RO         6313    i.lr1110_modem_gnss_scan_done  gnss_scan.o
+    0x08006d7c   0x08006d7c   0x00000084   Code   RO         6668    i.lr1110_modem_gnss_set_assistance_position  lr1110_modem_gnss.o
+    0x08006e00   0x08006e00   0x00000026   Code   RO         6669    i.lr1110_modem_gnss_set_constellations_to_use  lr1110_modem_gnss.o
+    0x08006e26   0x08006e26   0x00000108   Code   RO         6436    i.lr1110_modem_hal_read  lr1110_modem_hal.o
     0x08006f2e   0x08006f2e   0x00000002   PAD
-    0x08006f30   0x08006f30   0x00000074   Code   RO         6442    i.lr1110_modem_hal_reset  lr1110_modem_hal.o
-    0x08006fa4   0x08006fa4   0x00000034   Code   RO         6443    i.lr1110_modem_hal_wait_on_busy  lr1110_modem_hal.o
-    0x08006fd8   0x08006fd8   0x00000034   Code   RO         6444    i.lr1110_modem_hal_wait_on_unbusy  lr1110_modem_hal.o
-    0x0800700c   0x0800700c   0x00000030   Code   RO         6445    i.lr1110_modem_hal_wakeup  lr1110_modem_hal.o
-    0x0800703c   0x0800703c   0x0000014a   Code   RO         6446    i.lr1110_modem_hal_write  lr1110_modem_hal.o
-    0x08007186   0x08007186   0x00000022   Code   RO         6830    i.lr1110_modem_join  lr1110_modem_lorawan.o
-    0x080071a8   0x080071a8   0x00000060   Code   RO           25    i.lr1110_modem_join_fail  main_tracker.o
-    0x08007208   0x08007208   0x000000b0   Code   RO           26    i.lr1110_modem_mute  main_tracker.o
-    0x080072b8   0x080072b8   0x00000070   Code   RO           27    i.lr1110_modem_network_joined  main_tracker.o
-    0x08007328   0x08007328   0x00000064   Code   RO           28    i.lr1110_modem_new_link_adr  main_tracker.o
-    0x0800738c   0x0800738c   0x00000060   Code   RO           29    i.lr1110_modem_no_event  main_tracker.o
-    0x080073ec   0x080073ec   0x00000084   Code   RO           30    i.lr1110_modem_reset_event  main_tracker.o
-    0x08007470   0x08007470   0x0000002e   Code   RO         6839    i.lr1110_modem_send_stream_data  lr1110_modem_lorawan.o
-    0x0800749e   0x0800749e   0x00000034   Code   RO         6840    i.lr1110_modem_set_adr_profile  lr1110_modem_lorawan.o
-    0x080074d2   0x080074d2   0x0000003c   Code   RO         6841    i.lr1110_modem_set_alarm_timer  lr1110_modem_lorawan.o
-    0x0800750e   0x0800750e   0x00000028   Code   RO         6842    i.lr1110_modem_set_alc_sync_mode  lr1110_modem_lorawan.o
-    0x08007536   0x08007536   0x0000003c   Code   RO         6844    i.lr1110_modem_set_app_key  lr1110_modem_lorawan.o
-    0x08007572   0x08007572   0x00000028   Code   RO         6847    i.lr1110_modem_set_class  lr1110_modem_lorawan.o
+    0x08006f30   0x08006f30   0x00000074   Code   RO         6437    i.lr1110_modem_hal_reset  lr1110_modem_hal.o
+    0x08006fa4   0x08006fa4   0x00000034   Code   RO         6438    i.lr1110_modem_hal_wait_on_busy  lr1110_modem_hal.o
+    0x08006fd8   0x08006fd8   0x00000034   Code   RO         6439    i.lr1110_modem_hal_wait_on_unbusy  lr1110_modem_hal.o
+    0x0800700c   0x0800700c   0x00000030   Code   RO         6440    i.lr1110_modem_hal_wakeup  lr1110_modem_hal.o
+    0x0800703c   0x0800703c   0x0000014a   Code   RO         6441    i.lr1110_modem_hal_write  lr1110_modem_hal.o
+    0x08007186   0x08007186   0x00000022   Code   RO         6825    i.lr1110_modem_join  lr1110_modem_lorawan.o
+    0x080071a8   0x080071a8   0x00000060   Code   RO           24    i.lr1110_modem_join_fail  main_tracker.o
+    0x08007208   0x08007208   0x000000b0   Code   RO           25    i.lr1110_modem_mute  main_tracker.o
+    0x080072b8   0x080072b8   0x00000070   Code   RO           26    i.lr1110_modem_network_joined  main_tracker.o
+    0x08007328   0x08007328   0x00000064   Code   RO           27    i.lr1110_modem_new_link_adr  main_tracker.o
+    0x0800738c   0x0800738c   0x00000060   Code   RO           28    i.lr1110_modem_no_event  main_tracker.o
+    0x080073ec   0x080073ec   0x00000084   Code   RO           29    i.lr1110_modem_reset_event  main_tracker.o
+    0x08007470   0x08007470   0x0000002e   Code   RO         6834    i.lr1110_modem_send_stream_data  lr1110_modem_lorawan.o
+    0x0800749e   0x0800749e   0x00000034   Code   RO         6835    i.lr1110_modem_set_adr_profile  lr1110_modem_lorawan.o
+    0x080074d2   0x080074d2   0x0000003c   Code   RO         6836    i.lr1110_modem_set_alarm_timer  lr1110_modem_lorawan.o
+    0x0800750e   0x0800750e   0x00000028   Code   RO         6837    i.lr1110_modem_set_alc_sync_mode  lr1110_modem_lorawan.o
+    0x08007536   0x08007536   0x0000003c   Code   RO         6839    i.lr1110_modem_set_app_key  lr1110_modem_lorawan.o
+    0x08007572   0x08007572   0x00000028   Code   RO         6842    i.lr1110_modem_set_class  lr1110_modem_lorawan.o
     0x0800759a   0x0800759a   0x00000002   PAD
-    0x0800759c   0x0800759c   0x00000070   Code   RO           31    i.lr1110_modem_set_conf  main_tracker.o
-    0x0800760c   0x0800760c   0x0000003a   Code   RO         6849    i.lr1110_modem_set_dev_eui  lr1110_modem_lorawan.o
-    0x08007646   0x08007646   0x00000042   Code   RO         6850    i.lr1110_modem_set_dm_info_field  lr1110_modem_lorawan.o
-    0x08007688   0x08007688   0x00000032   Code   RO         6851    i.lr1110_modem_set_dm_info_interval  lr1110_modem_lorawan.o
-    0x080076ba   0x080076ba   0x0000003a   Code   RO         6854    i.lr1110_modem_set_join_eui  lr1110_modem_lorawan.o
-    0x080076f4   0x080076f4   0x00000028   Code   RO         6855    i.lr1110_modem_set_region  lr1110_modem_lorawan.o
-    0x0800771c   0x0800771c   0x00000028   Code   RO         6856    i.lr1110_modem_set_rf_output  lr1110_modem_lorawan.o
-    0x08007744   0x08007744   0x00000084   Code   RO           32    i.lr1110_modem_stream_done  main_tracker.o
-    0x080077c8   0x080077c8   0x0000002e   Code   RO         6858    i.lr1110_modem_stream_init  lr1110_modem_lorawan.o
-    0x080077f6   0x080077f6   0x0000004e   Code   RO         6859    i.lr1110_modem_stream_status  lr1110_modem_lorawan.o
-    0x08007844   0x08007844   0x00000056   Code   RO         7295    i.lr1110_modem_system_set_dio_as_rf_switch  lr1110_modem_system.o
-    0x0800789a   0x0800789a   0x00000028   Code   RO         7296    i.lr1110_modem_system_set_reg_mode  lr1110_modem_system.o
-    0x080078c2   0x080078c2   0x0000003c   Code   RO         7297    i.lr1110_modem_system_set_tcxo_mode  lr1110_modem_system.o
+    0x0800759c   0x0800759c   0x00000070   Code   RO           30    i.lr1110_modem_set_conf  main_tracker.o
+    0x0800760c   0x0800760c   0x0000003a   Code   RO         6844    i.lr1110_modem_set_dev_eui  lr1110_modem_lorawan.o
+    0x08007646   0x08007646   0x00000042   Code   RO         6845    i.lr1110_modem_set_dm_info_field  lr1110_modem_lorawan.o
+    0x08007688   0x08007688   0x00000032   Code   RO         6846    i.lr1110_modem_set_dm_info_interval  lr1110_modem_lorawan.o
+    0x080076ba   0x080076ba   0x0000003a   Code   RO         6849    i.lr1110_modem_set_join_eui  lr1110_modem_lorawan.o
+    0x080076f4   0x080076f4   0x00000028   Code   RO         6850    i.lr1110_modem_set_region  lr1110_modem_lorawan.o
+    0x0800771c   0x0800771c   0x00000028   Code   RO         6851    i.lr1110_modem_set_rf_output  lr1110_modem_lorawan.o
+    0x08007744   0x08007744   0x00000084   Code   RO           31    i.lr1110_modem_stream_done  main_tracker.o
+    0x080077c8   0x080077c8   0x0000002e   Code   RO         6853    i.lr1110_modem_stream_init  lr1110_modem_lorawan.o
+    0x080077f6   0x080077f6   0x0000004e   Code   RO         6854    i.lr1110_modem_stream_status  lr1110_modem_lorawan.o
+    0x08007844   0x08007844   0x00000056   Code   RO         7290    i.lr1110_modem_system_set_dio_as_rf_switch  lr1110_modem_system.o
+    0x0800789a   0x0800789a   0x00000028   Code   RO         7291    i.lr1110_modem_system_set_reg_mode  lr1110_modem_system.o
+    0x080078c2   0x080078c2   0x0000003c   Code   RO         7292    i.lr1110_modem_system_set_tcxo_mode  lr1110_modem_system.o
     0x080078fe   0x080078fe   0x00000002   PAD
-    0x08007900   0x08007900   0x00000110   Code   RO           33    i.lr1110_modem_time_updated_alc_sync  main_tracker.o
-    0x08007a10   0x08007a10   0x00000028   Code   RO         7358    i.lr1110_modem_wifi_cfg_hardware_debarker  lr1110_modem_wifi.o
-    0x08007a38   0x08007a38   0x0000007a   Code   RO         7360    i.lr1110_modem_wifi_passive_scan  lr1110_modem_wifi.o
-    0x08007ab2   0x08007ab2   0x00000022   Code   RO         7362    i.lr1110_modem_wifi_read_basic_results  lr1110_modem_wifi.o
-    0x08007ad4   0x08007ad4   0x00000022   Code   RO         7363    i.lr1110_modem_wifi_read_complete_results  lr1110_modem_wifi.o
-    0x08007af6   0x08007af6   0x000000ae   Code   RO         7364    i.lr1110_modem_wifi_read_cumulative_timing  lr1110_modem_wifi.o
-    0x08007ba4   0x08007ba4   0x00000022   Code   RO         7366    i.lr1110_modem_wifi_reset_cumulative_timing  lr1110_modem_wifi.o
+    0x08007900   0x08007900   0x00000110   Code   RO           32    i.lr1110_modem_time_updated_alc_sync  main_tracker.o
+    0x08007a10   0x08007a10   0x00000028   Code   RO         7353    i.lr1110_modem_wifi_cfg_hardware_debarker  lr1110_modem_wifi.o
+    0x08007a38   0x08007a38   0x0000007a   Code   RO         7355    i.lr1110_modem_wifi_passive_scan  lr1110_modem_wifi.o
+    0x08007ab2   0x08007ab2   0x00000022   Code   RO         7357    i.lr1110_modem_wifi_read_basic_results  lr1110_modem_wifi.o
+    0x08007ad4   0x08007ad4   0x00000022   Code   RO         7358    i.lr1110_modem_wifi_read_complete_results  lr1110_modem_wifi.o
+    0x08007af6   0x08007af6   0x000000ae   Code   RO         7359    i.lr1110_modem_wifi_read_cumulative_timing  lr1110_modem_wifi.o
+    0x08007ba4   0x08007ba4   0x00000022   Code   RO         7361    i.lr1110_modem_wifi_reset_cumulative_timing  lr1110_modem_wifi.o
     0x08007bc6   0x08007bc6   0x00000002   PAD
-    0x08007bc8   0x08007bc8   0x00000028   Code   RO         6190    i.lr1110_modem_wifi_scan_done  wifi_scan.o
-    0x08007bf0   0x08007bf0   0x00000018   Code   RO         7369    i.lr1110_wifi_read_mac_address_from_buffer  lr1110_modem_wifi.o
-    0x08007c08   0x08007c08   0x00000898   Code   RO           34    i.main              main_tracker.o
-    0x080084a0   0x080084a0   0x00000150   Code   RO           35    i.modem_status_to_string  main_tracker.o
-    0x080085f0   0x080085f0   0x0000000c   Code   RO         6319    i.on_gnss_scan_timeout_event  gnss_scan.o
-    0x080085fc   0x080085fc   0x00000018   Code   RO           36    i.on_led_rx_timer_event  main_tracker.o
-    0x08008614   0x08008614   0x00000018   Code   RO           37    i.on_led_tx_timer_event  main_tracker.o
-    0x0800862c   0x0800862c   0x0000000c   Code   RO         6447    i.on_lr1110_modem_reset_timeout_event  lr1110_modem_hal.o
-    0x08008638   0x08008638   0x00000064   Code   RO         8290    i.on_soft_watchdog_event  smtc_hal_mcu.o
-    0x0800869c   0x0800869c   0x0000000c   Code   RO         6191    i.on_wifi_scan_timeout_event  wifi_scan.o
-    0x080086a8   0x080086a8   0x0000008c   Code   RO           38    i.parse_frame       main_tracker.o
-    0x08008734   0x08008734   0x00000050   Code   RO           39    i.print_hex_buffer  main_tracker.o
-    0x08008784   0x08008784   0x000000d8   Code   RO           40    i.print_lorawan_keys  main_tracker.o
-    0x0800885c   0x0800885c   0x00000002   Code   RO         6389    i.radio_event_callback  lr1110.o
+    0x08007bc8   0x08007bc8   0x00000028   Code   RO         6185    i.lr1110_modem_wifi_scan_done  wifi_scan.o
+    0x08007bf0   0x08007bf0   0x00000018   Code   RO         7364    i.lr1110_wifi_read_mac_address_from_buffer  lr1110_modem_wifi.o
+    0x08007c08   0x08007c08   0x00000898   Code   RO           33    i.main              main_tracker.o
+    0x080084a0   0x080084a0   0x00000150   Code   RO           34    i.modem_status_to_string  main_tracker.o
+    0x080085f0   0x080085f0   0x0000000c   Code   RO         6314    i.on_gnss_scan_timeout_event  gnss_scan.o
+    0x080085fc   0x080085fc   0x00000018   Code   RO           35    i.on_led_rx_timer_event  main_tracker.o
+    0x08008614   0x08008614   0x00000018   Code   RO           36    i.on_led_tx_timer_event  main_tracker.o
+    0x0800862c   0x0800862c   0x0000000c   Code   RO         6442    i.on_lr1110_modem_reset_timeout_event  lr1110_modem_hal.o
+    0x08008638   0x08008638   0x00000064   Code   RO         8285    i.on_soft_watchdog_event  smtc_hal_mcu.o
+    0x0800869c   0x0800869c   0x0000000c   Code   RO         6186    i.on_wifi_scan_timeout_event  wifi_scan.o
+    0x080086a8   0x080086a8   0x0000008c   Code   RO           37    i.parse_frame       main_tracker.o
+    0x08008734   0x08008734   0x00000050   Code   RO           38    i.print_hex_buffer  main_tracker.o
+    0x08008784   0x08008784   0x000000d8   Code   RO           39    i.print_lorawan_keys  main_tracker.o
+    0x0800885c   0x0800885c   0x00000002   Code   RO         6384    i.radio_event_callback  lr1110.o
     0x0800885e   0x0800885e   0x00000002   PAD
-    0x08008860   0x08008860   0x0000000c   Code   RO         6390    i.radio_event_init  lr1110.o
-    0x0800886c   0x0800886c   0x00000028   Code   RO         7962    i.rand1             utilities.o
-    0x08008894   0x08008894   0x0000001a   Code   RO         7963    i.randr             utilities.o
+    0x08008860   0x08008860   0x0000000c   Code   RO         6385    i.radio_event_init  lr1110.o
+    0x0800886c   0x0800886c   0x00000028   Code   RO         7957    i.rand1             utilities.o
+    0x08008894   0x08008894   0x0000001a   Code   RO         7958    i.randr             utilities.o
     0x080088ae   0x080088ae   0x00000002   PAD
-    0x080088b0   0x080088b0   0x000000d8   Code   RO         8579    i.rtc_get_timestamp_in_ticks  smtc_hal_rtc.o
-    0x08008988   0x08008988   0x00000020   Code   RO         8981    i.timer_exists      smtc_hal_tmr_list.o
-    0x080089a8   0x080089a8   0x00000012   Code   RO         8983    i.timer_init        smtc_hal_tmr_list.o
+    0x080088b0   0x080088b0   0x000000d8   Code   RO         8574    i.rtc_get_timestamp_in_ticks  smtc_hal_rtc.o
+    0x08008988   0x08008988   0x00000020   Code   RO         8976    i.timer_exists      smtc_hal_tmr_list.o
+    0x080089a8   0x080089a8   0x00000012   Code   RO         8978    i.timer_init        smtc_hal_tmr_list.o
     0x080089ba   0x080089ba   0x00000002   PAD
-    0x080089bc   0x080089bc   0x00000020   Code   RO         8984    i.timer_insert_new_head_timer  smtc_hal_tmr_list.o
-    0x080089dc   0x080089dc   0x00000034   Code   RO         8985    i.timer_insert_timer  smtc_hal_tmr_list.o
-    0x08008a10   0x08008a10   0x000000bc   Code   RO         8986    i.timer_irq_handler  smtc_hal_tmr_list.o
-    0x08008acc   0x08008acc   0x00000012   Code   RO         8988    i.timer_reset       smtc_hal_tmr_list.o
-    0x08008ade   0x08008ade   0x0000002a   Code   RO         8990    i.timer_set_timeout  smtc_hal_tmr_list.o
-    0x08008b08   0x08008b08   0x0000002c   Code   RO         8991    i.timer_set_value   smtc_hal_tmr_list.o
-    0x08008b34   0x08008b34   0x00000070   Code   RO         8992    i.timer_start       smtc_hal_tmr_list.o
-    0x08008ba4   0x08008ba4   0x000000b0   Code   RO         8993    i.timer_stop        smtc_hal_tmr_list.o
-    0x08008c54   0x08008c54   0x000000b4   Code   RO         6157    i.tracker_init_app_ctx  tracker_utility.o
-    0x08008d08   0x08008d08   0x000000c0   Code   RO           41    i.tracker_run_gnss_scan  main_tracker.o
-    0x08008dc8   0x08008dc8   0x00000070   Code   RO           42    i.tracker_run_wifi_scan  main_tracker.o
-    0x08008e38   0x08008e38   0x00000010   Code   RO         7370    i.uint16_from_array  lr1110_modem_wifi.o
-    0x08008e48   0x08008e48   0x00000074   Code   RO         7371    i.uint64_from_array  lr1110_modem_wifi.o
-    0x08008ebc   0x08008ebc   0x0000002a   Code   RO         8291    i.vprint            smtc_hal_mcu.o
-    0x08008ee6   0x08008ee6   0x0000009c   Code   RO         6192    i.wifi_add_basic_mac_to_results  wifi_scan.o
-    0x08008f82   0x08008f82   0x000000b2   Code   RO         6193    i.wifi_add_complete_mac_to_results  wifi_scan.o
-    0x08009034   0x08009034   0x0000004e   Code   RO         6194    i.wifi_compute_consumption  wifi_scan.o
+    0x080089bc   0x080089bc   0x00000020   Code   RO         8979    i.timer_insert_new_head_timer  smtc_hal_tmr_list.o
+    0x080089dc   0x080089dc   0x00000034   Code   RO         8980    i.timer_insert_timer  smtc_hal_tmr_list.o
+    0x08008a10   0x08008a10   0x000000bc   Code   RO         8981    i.timer_irq_handler  smtc_hal_tmr_list.o
+    0x08008acc   0x08008acc   0x00000012   Code   RO         8983    i.timer_reset       smtc_hal_tmr_list.o
+    0x08008ade   0x08008ade   0x0000002a   Code   RO         8985    i.timer_set_timeout  smtc_hal_tmr_list.o
+    0x08008b08   0x08008b08   0x0000002c   Code   RO         8986    i.timer_set_value   smtc_hal_tmr_list.o
+    0x08008b34   0x08008b34   0x00000070   Code   RO         8987    i.timer_start       smtc_hal_tmr_list.o
+    0x08008ba4   0x08008ba4   0x000000b0   Code   RO         8988    i.timer_stop        smtc_hal_tmr_list.o
+    0x08008c54   0x08008c54   0x000000b4   Code   RO         6152    i.tracker_init_app_ctx  tracker_utility.o
+    0x08008d08   0x08008d08   0x000000c0   Code   RO           40    i.tracker_run_gnss_scan  main_tracker.o
+    0x08008dc8   0x08008dc8   0x00000070   Code   RO           41    i.tracker_run_wifi_scan  main_tracker.o
+    0x08008e38   0x08008e38   0x00000010   Code   RO         7365    i.uint16_from_array  lr1110_modem_wifi.o
+    0x08008e48   0x08008e48   0x00000074   Code   RO         7366    i.uint64_from_array  lr1110_modem_wifi.o
+    0x08008ebc   0x08008ebc   0x0000002a   Code   RO         8286    i.vprint            smtc_hal_mcu.o
+    0x08008ee6   0x08008ee6   0x0000009c   Code   RO         6187    i.wifi_add_basic_mac_to_results  wifi_scan.o
+    0x08008f82   0x08008f82   0x000000b2   Code   RO         6188    i.wifi_add_complete_mac_to_results  wifi_scan.o
+    0x08009034   0x08009034   0x0000004e   Code   RO         6189    i.wifi_compute_consumption  wifi_scan.o
     0x08009082   0x08009082   0x00000002   PAD
-    0x08009084   0x08009084   0x00000068   Code   RO         6195    i.wifi_configure    wifi_scan.o
-    0x080090ec   0x080090ec   0x0000017c   Code   RO         6196    i.wifi_execute_scan  wifi_scan.o
-    0x08009268   0x08009268   0x00000044   Code   RO         6197    i.wifi_init         wifi_scan.o
-    0x080092ac   0x080092ac   0x00000048   Data   RO         5233    .constdata          system_stm32l4xx.o
-    0x080092f4   0x080092f4   0x00000044   Data   RO         8040    .constdata          smtc_hal_gpio.o
-    0x08009338   0x08009338   0x0000000e   Data   RO         8293    .constdata          smtc_hal_mcu.o
-    0x08009346   0x08009346   0x00000018   Data   RO         8581    .constdata          smtc_hal_rtc.o
+    0x08009084   0x08009084   0x00000068   Code   RO         6190    i.wifi_configure    wifi_scan.o
+    0x080090ec   0x080090ec   0x0000017c   Code   RO         6191    i.wifi_execute_scan  wifi_scan.o
+    0x08009268   0x08009268   0x00000044   Code   RO         6192    i.wifi_init         wifi_scan.o
+    0x080092ac   0x080092ac   0x00000048   Data   RO         5228    .constdata          system_stm32l4xx.o
+    0x080092f4   0x080092f4   0x00000044   Data   RO         8035    .constdata          smtc_hal_gpio.o
+    0x08009338   0x08009338   0x0000000e   Data   RO         8288    .constdata          smtc_hal_mcu.o
+    0x08009346   0x08009346   0x00000018   Data   RO         8576    .constdata          smtc_hal_rtc.o
     0x0800935e   0x0800935e   0x00000002   PAD
-    0x08009360   0x08009360   0x00000028   Data   RO         8739    .constdata          smtc_hal_spi.o
-    0x08009388   0x08009388   0x0000003c   Data   RO         8873    .constdata          smtc_hal_uart.o
-    0x080093c4   0x080093c4   0x0000000c   Data   RO         9098    .constdata          mc_w.l(localtime.o)
-    0x080093d0   0x080093d0   0x00000087   Data   RO           45    .conststring        main_tracker.o
+    0x08009360   0x08009360   0x00000028   Data   RO         8734    .constdata          smtc_hal_spi.o
+    0x08009388   0x08009388   0x0000003c   Data   RO         8868    .constdata          smtc_hal_uart.o
+    0x080093c4   0x080093c4   0x0000000c   Data   RO         9093    .constdata          mc_w.l(localtime.o)
+    0x080093d0   0x080093d0   0x00000087   Data   RO           44    .conststring        main_tracker.o
     0x08009457   0x08009457   0x00000001   PAD
-    0x08009458   0x08009458   0x00000020   Data   RO         9188    Region$$Table       anon$$obj.o
+    0x08009458   0x08009458   0x00000020   Data   RO         9183    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08009478, Size: 0x00001e00, Max: 0x00018000, ABSOLUTE, COMPRESSED[0x00000040])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   COMPRESSED   0x0000002d   Data   RW           46    .data               main_tracker.o
+    0x20000000   COMPRESSED   0x0000002d   Data   RW           45    .data               main_tracker.o
     0x2000002d   COMPRESSED   0x00000003   PAD
-    0x20000030   COMPRESSED   0x0000000c   Data   RW         3157    .data               stm32l4xx_hal.o
-    0x2000003c   COMPRESSED   0x00000004   Data   RW         5234    .data               system_stm32l4xx.o
-    0x20000040   COMPRESSED   0x00000001   Data   RW         6199    .data               wifi_scan.o
-    0x20000041   COMPRESSED   0x00000002   Data   RW         6321    .data               gnss_scan.o
+    0x20000030   COMPRESSED   0x0000000c   Data   RW         3152    .data               stm32l4xx_hal.o
+    0x2000003c   COMPRESSED   0x00000004   Data   RW         5229    .data               system_stm32l4xx.o
+    0x20000040   COMPRESSED   0x00000001   Data   RW         6194    .data               wifi_scan.o
+    0x20000041   COMPRESSED   0x00000002   Data   RW         6316    .data               gnss_scan.o
     0x20000043   COMPRESSED   0x00000001   PAD
-    0x20000044   COMPRESSED   0x00000004   Data   RW         6391    .data               lr1110.o
-    0x20000048   COMPRESSED   0x00000001   Data   RW         6449    .data               lr1110_modem_hal.o
-    0x20000049   COMPRESSED   0x00000001   Data   RW         7854    .data               lr1110-modem-board.o
+    0x20000044   COMPRESSED   0x00000004   Data   RW         6386    .data               lr1110.o
+    0x20000048   COMPRESSED   0x00000001   Data   RW         6444    .data               lr1110_modem_hal.o
+    0x20000049   COMPRESSED   0x00000001   Data   RW         7849    .data               lr1110-modem-board.o
     0x2000004a   COMPRESSED   0x00000002   PAD
-    0x2000004c   COMPRESSED   0x00000004   Data   RW         7965    .data               utilities.o
-    0x20000050   COMPRESSED   0x00000003   Data   RW         8294    .data               smtc_hal_mcu.o
+    0x2000004c   COMPRESSED   0x00000004   Data   RW         7960    .data               utilities.o
+    0x20000050   COMPRESSED   0x00000003   Data   RW         8289    .data               smtc_hal_mcu.o
     0x20000053   COMPRESSED   0x00000001   PAD
-    0x20000054   COMPRESSED   0x000000e0   Data   RW         8740    .data               smtc_hal_spi.o
-    0x20000134   COMPRESSED   0x00000008   Data   RW         8798    .data               smtc_hal_tmr.o
-    0x2000013c   COMPRESSED   0x00000199   Data   RW         8874    .data               smtc_hal_uart.o
+    0x20000054   COMPRESSED   0x000000e0   Data   RW         8735    .data               smtc_hal_spi.o
+    0x20000134   COMPRESSED   0x00000008   Data   RW         8793    .data               smtc_hal_tmr.o
+    0x2000013c   COMPRESSED   0x00000199   Data   RW         8869    .data               smtc_hal_uart.o
     0x200002d5   COMPRESSED   0x00000003   PAD
-    0x200002d8   COMPRESSED   0x00000004   Data   RW         8995    .data               smtc_hal_tmr_list.o
-    0x200002dc        -       0x00000164   Zero   RW           43    .bss                main_tracker.o
-    0x20000440        -       0x000008d0   Zero   RW         6158    .bss                tracker_utility.o
-    0x20000d10        -       0x00000578   Zero   RW         6198    .bss                wifi_scan.o
-    0x20001288        -       0x00000178   Zero   RW         6320    .bss                gnss_scan.o
-    0x20001400        -       0x00000018   Zero   RW         6448    .bss                lr1110_modem_hal.o
-    0x20001418        -       0x00000040   Zero   RW         8039    .bss                smtc_hal_gpio.o
-    0x20001458        -       0x000000d8   Zero   RW         8292    .bss                smtc_hal_mcu.o
-    0x20001530        -       0x00000068   Zero   RW         8580    .bss                smtc_hal_rtc.o
-    0x20001598        -       0x00000038   Zero   RW         8797    .bss                smtc_hal_tmr.o
-    0x200015d0        -       0x0000002c   Zero   RW         9097    .bss                mc_w.l(localtime.o)
+    0x200002d8   COMPRESSED   0x00000004   Data   RW         8990    .data               smtc_hal_tmr_list.o
+    0x200002dc        -       0x00000164   Zero   RW           42    .bss                main_tracker.o
+    0x20000440        -       0x000008d0   Zero   RW         6153    .bss                tracker_utility.o
+    0x20000d10        -       0x00000578   Zero   RW         6193    .bss                wifi_scan.o
+    0x20001288        -       0x00000178   Zero   RW         6315    .bss                gnss_scan.o
+    0x20001400        -       0x00000018   Zero   RW         6443    .bss                lr1110_modem_hal.o
+    0x20001418        -       0x00000040   Zero   RW         8034    .bss                smtc_hal_gpio.o
+    0x20001458        -       0x000000d8   Zero   RW         8287    .bss                smtc_hal_mcu.o
+    0x20001530        -       0x00000068   Zero   RW         8575    .bss                smtc_hal_rtc.o
+    0x20001598        -       0x00000038   Zero   RW         8792    .bss                smtc_hal_tmr.o
+    0x200015d0        -       0x0000002c   Zero   RW         9092    .bss                mc_w.l(localtime.o)
     0x200015fc   COMPRESSED   0x00000004   PAD
     0x20001600        -       0x00000800   Zero   RW            1    STACK               startup_stm32l476xx.o
 
