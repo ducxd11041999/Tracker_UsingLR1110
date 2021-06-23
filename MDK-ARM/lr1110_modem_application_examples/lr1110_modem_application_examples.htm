@@ -3,7 +3,7 @@
 <title>Static Call Graph - [lr1110_modem_application_examples\lr1110_modem_application_examples.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image lr1110_modem_application_examples\lr1110_modem_application_examples.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Apr 23 10:09:38 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Jun 23 17:56:52 2021
 <BR><P>
 <H3>Maximum Stack Usage =       1936 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -434,10 +434,10 @@ Global Symbols
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_ms_2_tick
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ldivmod
-<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_ms_2_tick
 </UL>
 
 <P><STRONG><a name="[7b]"></a>__aeabi_ldivmod</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, ldiv.o(.text))
@@ -467,10 +467,10 @@ Global Symbols
 <LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tracker_run_wifi_scan
 <LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_init_out
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_deinit
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspInit
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
 <LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_start_alarm
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspInit
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 </UL>
 
 <P><STRONG><a name="[1da]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
@@ -709,9 +709,9 @@ Global Symbols
 <P><STRONG><a name="[9c]"></a>HAL_GPIO_DeInit</STRONG> (Thumb, 292 bytes, Stack size 20 bytes, stm32l4xx_hal_gpio.o(i.HAL_GPIO_DeInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = HAL_GPIO_DeInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspDeInit
+<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspDeInit
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspDeInit
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspDeInit
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspDeInit
 </UL>
 
 <P><STRONG><a name="[8e]"></a>HAL_GPIO_EXTI_Callback</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, smtc_hal_gpio.o(i.HAL_GPIO_EXTI_Callback))
@@ -737,10 +737,10 @@ Global Symbols
 <P><STRONG><a name="[9e]"></a>HAL_GPIO_Init</STRONG> (Thumb, 480 bytes, Stack size 20 bytes, stm32l4xx_hal_gpio.o(i.HAL_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = HAL_GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspInit
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_init
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<BR>[Called By]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_init
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspInit
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 </UL>
 
 <P><STRONG><a name="[136]"></a>HAL_GPIO_ReadPin</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l4xx_hal_gpio.o(i.HAL_GPIO_ReadPin))
@@ -758,17 +758,17 @@ Global Symbols
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnFlagUntilTimeout
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_IsAcknowledgeFailed
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPTIM_Disable
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Write
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Read
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_CheckIdleState
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCCEx_PLLSAI2_Config
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCCEx_PLLSAI1_Config
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_CheckIdleState
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPTIM_Disable
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Write
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Read
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EnterInitMode
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_WaitForSynchro
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_SetAlarm_IT
@@ -950,12 +950,12 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[af]"></a>HAL_NVIC_EnableIRQ</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, stm32l4xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ))
-<BR><BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_pvd_config
-<LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_init
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<BR><BR>[Called By]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_init
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LPTIM_MspInit
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_MspInit
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_init
+<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_pvd_config
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 </UL>
 
 <P><STRONG><a name="[a4]"></a>HAL_NVIC_SetPriority</STRONG> (Thumb, 124 bytes, Stack size 40 bytes, stm32l4xx_hal_cortex.o(i.HAL_NVIC_SetPriority))
@@ -965,14 +965,14 @@ Global Symbols
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_GetPriorityGrouping
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_system_clock_config
-<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_pvd_config
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_init
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LPTIM_MspInit
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_MspInit
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_init
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
+<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_system_clock_config
+<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_pvd_config
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 </UL>
 
 <P><STRONG><a name="[a0]"></a>HAL_NVIC_SetPriorityGrouping</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, stm32l4xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping))
@@ -999,9 +999,9 @@ Global Symbols
 <P><STRONG><a name="[b4]"></a>HAL_RCCEx_PeriphCLKConfig</STRONG> (Thumb, 1230 bytes, Stack size 32 bytes, stm32l4xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = HAL_RCCEx_PeriphCLKConfig &rArr; RCCEx_PLLSAI2_Config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCCEx_PLLSAI2_Config
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCCEx_PLLSAI2_Config
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCCEx_PLLSAI1_Config
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_system_clock_re_config_after_stop
 <LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_system_clock_config
@@ -1010,9 +1010,9 @@ Global Symbols
 <P><STRONG><a name="[b7]"></a>HAL_RCC_ClockConfig</STRONG> (Thumb, 360 bytes, Stack size 24 bytes, stm32l4xx_hal_rcc.o(i.HAL_RCC_ClockConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = HAL_RCC_ClockConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority &rArr; __NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_system_clock_re_config_after_stop
 <LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_system_clock_config
@@ -1043,18 +1043,18 @@ Global Symbols
 <P><STRONG><a name="[b8]"></a>HAL_RCC_GetSysClockFreq</STRONG> (Thumb, 220 bytes, Stack size 20 bytes, stm32l4xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = HAL_RCC_GetSysClockFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
+<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 </UL>
 
 <P><STRONG><a name="[bc]"></a>HAL_RCC_OscConfig</STRONG> (Thumb, 1660 bytes, Stack size 32 bytes, stm32l4xx_hal_rcc.o(i.HAL_RCC_OscConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_RCC_OscConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority &rArr; __NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_SetFlashLatencyFromMSIRange
+<BR>[Calls]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_SetFlashLatencyFromMSIRange
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_system_clock_re_config_after_stop
 <LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_system_clock_config
@@ -1245,11 +1245,11 @@ Global Symbols
 <P><STRONG><a name="[d7]"></a>HAL_UART_IRQHandler</STRONG> (Thumb, 394 bytes, Stack size 32 bytes, stm32l4xx_hal_uart.o(i.HAL_UART_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = HAL_UART_IRQHandler &rArr; HAL_DMA_Abort_IT
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Abort_IT
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_ErrorCallback
+<BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_ErrorCallback
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UARTEx_WakeupCallback
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndTransmit_IT
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndRxTransfer
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Abort_IT
 </UL>
 <BR>[Called By]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART3_IRQHandler
 <LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_IRQHandler
@@ -1291,8 +1291,8 @@ Global Symbols
 <P><STRONG><a name="[e2]"></a>HAL_UART_Transmit</STRONG> (Thumb, 208 bytes, Stack size 40 bytes, stm32l4xx_hal_uart.o(i.HAL_UART_Transmit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
+<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_uart_tx
 </UL>
@@ -1395,8 +1395,8 @@ Global Symbols
 <P><STRONG><a name="[e1]"></a>UART_CheckIdleState</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, stm32l4xx_hal_uart.o(i.UART_CheckIdleState))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = UART_CheckIdleState &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
+<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 </UL>
@@ -1502,7 +1502,8 @@ Global Symbols
 <P><STRONG><a name="[fc]"></a>accelerometer_init</STRONG> (Thumb, 310 bytes, Stack size 24 bytes, lis2de12.o(i.accelerometer_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = accelerometer_init &rArr; lis2de12_temperature_meas_set &rArr; lis2de12_write_reg &rArr; hal_i2c_write_buffer &rArr; i2c_write_buffer &rArr; HAL_I2C_Mem_Write &rArr; I2C_RequestMemoryWrite &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
-<BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lis2de12_write_reg
+<BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;accelerometer_irq1_init
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lis2de12_write_reg
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lis2de12_temperature_meas_set
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lis2de12_read_reg
 <LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lis2de12_pin_int1_config_set
@@ -1516,7 +1517,6 @@ Global Symbols
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lis2de12_device_id_get
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lis2de12_data_rate_set
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lis2de12_block_data_update_set
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;accelerometer_irq1_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_init_periph
 </UL>
@@ -1660,12 +1660,12 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;leds_on
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;leds_off
-<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lna_on
-<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lna_off
 <LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_write
 <LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_wakeup
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_reset
 <LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_read
+<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lna_on
+<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lna_off
 </UL>
 
 <P><STRONG><a name="[13b]"></a>hal_i2c_deinit</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, smtc_hal_i2c.o(i.hal_i2c_deinit))
@@ -1723,16 +1723,16 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 488<LI>Call Chain = hal_mcu_init &rArr; hal_spi_init &rArr; HAL_SPI_Init &rArr; HAL_SPI_MspInit &rArr; hal_mcu_panic &rArr; hal_mcu_trace_print &rArr; vprint &rArr; hal_uart_tx &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_system_clock_config
-<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_pvd_config
-<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_gpio_init
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_i2c_init
 <LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_board_init_io_context
 <LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_board_init_io
 <LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_uart_init
 <LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_tmr_init
 <LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_spi_init
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_init
+<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_system_clock_config
+<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_pvd_config
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_gpio_init
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_i2c_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1774,17 +1774,17 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_trace_print
 <LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_critical_section_begin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_i2c_init
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspInit
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspDeInit
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspDeInit
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
+<BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspDeInit
 <LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_uart_init
 <LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_tmr_init
 <LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_spi_init
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_init
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_i2c_init
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspInit
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspDeInit
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspDeInit
 </UL>
 
 <P><STRONG><a name="[1b8]"></a>hal_mcu_partial_sleep_enable</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, smtc_hal_mcu.o(i.hal_mcu_partial_sleep_enable))
@@ -1794,8 +1794,8 @@ Global Symbols
 <P><STRONG><a name="[e7]"></a>hal_mcu_reset</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, smtc_hal_mcu.o(i.hal_mcu_reset))
 <BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_reset_event
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_alarm
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;on_soft_watchdog_event
 <LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PVD_PVM_IRQHandler
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;on_soft_watchdog_event
 </UL>
 
 <P><STRONG><a name="[164]"></a>hal_mcu_reset_software_watchdog</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, smtc_hal_mcu.o(i.hal_mcu_reset_software_watchdog))
@@ -1827,10 +1827,10 @@ Global Symbols
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bme280_init
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add_payload_in_streaming_fifo
 <LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_write
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;on_soft_watchdog_event
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_panic
 <LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PVD_PVM_IRQHandler
 <LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;on_soft_watchdog_event
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_panic
 </UL>
 
 <P><STRONG><a name="[1c7]"></a>hal_rtc_get_minimum_timeout</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, smtc_hal_rtc.o(i.hal_rtc_get_minimum_timeout))
@@ -1857,8 +1857,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_get_timestamp_in_ticks
 </UL>
 <BR>[Called By]<UL><LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_start
-<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_set_timeout
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_irq_handler
+<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_set_timeout
 </UL>
 
 <P><STRONG><a name="[156]"></a>hal_rtc_init</STRONG> (Thumb, 166 bytes, Stack size 32 bytes, smtc_hal_rtc.o(i.hal_rtc_init))
@@ -1871,8 +1871,8 @@ Global Symbols
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_SetDate
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_Init
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_DeactivateAlarm
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_panic
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_set_time_ref_in_ticks
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_panic
 </UL>
 <BR>[Called By]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_init
 </UL>
@@ -1899,8 +1899,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = hal_rtc_start_alarm &rArr; HAL_RTC_SetAlarm_IT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_SetAlarm_IT
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 <LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_stop_alarm
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_set_timeout
 </UL>
@@ -2296,12 +2296,12 @@ Global Symbols
 <P><STRONG><a name="[18c]"></a>lr1110_modem_board_init</STRONG> (Thumb, 112 bytes, Stack size 32 bytes, lr1110-modem-board.o(i.lr1110_modem_board_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1360<LI>Call Chain = lr1110_modem_board_init &rArr; lr1110_modem_hal_reset &rArr; lr1110_modem_event_process &rArr; lr1110_modem_get_event &rArr; lr1110_modem_get_event_size &rArr; lr1110_modem_hal_read &rArr; lr1110_modem_hal_wakeup &rArr; lr1110_modem_hal_wait_on_unbusy &rArr; hal_rtc_get_time_ms &rArr; hal_rtc_get_calendar_time &rArr; rtc_get_timestamp_in_ticks &rArr; HAL_RTC_GetTime
 </UL>
-<BR>[Calls]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;radio_event_init
+<BR>[Calls]<UL><LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_set_rf_output
+<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_reset
+<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;radio_event_init
+<LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_board_init_tcxo_io
 <LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_system_set_reg_mode
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_system_set_dio_as_rf_switch
-<LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_set_rf_output
-<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_reset
-<LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_board_init_tcxo_io
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -2541,12 +2541,12 @@ Global Symbols
 <P><STRONG><a name="[19c]"></a>lr1110_modem_hal_read</STRONG> (Thumb, 258 bytes, Stack size 40 bytes, lr1110_modem_hal.o(i.lr1110_modem_hal_read))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = lr1110_modem_hal_read &rArr; lr1110_modem_hal_wakeup &rArr; lr1110_modem_hal_wait_on_unbusy &rArr; hal_rtc_get_time_ms &rArr; hal_rtc_get_calendar_time &rArr; rtc_get_timestamp_in_ticks &rArr; HAL_RTC_GetTime
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_wait_on_unbusy
+<BR>[Calls]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_spi_in_out
+<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_wakeup
+<LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_wait_on_unbusy
 <LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_wait_on_busy
 <LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_compute_crc
 <LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_set_value
-<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_spi_in_out
-<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_wakeup
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_stream_status
 <LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_get_version
@@ -2557,12 +2557,12 @@ Global Symbols
 <LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_get_chip_eui
 <LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_get_charge
 <LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_get_adr_profile
+<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_get_gps_time
+<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_get_event_size
 <LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_get_event
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_gnss_get_nb_detected_satellites
 <LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_gnss_get_detected_satellites
 <LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_wifi_read_cumulative_timing
-<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_get_gps_time
-<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_get_event_size
 </UL>
 
 <P><STRONG><a name="[18e]"></a>lr1110_modem_hal_reset</STRONG> (Thumb, 102 bytes, Stack size 8 bytes, lr1110_modem_hal.o(i.lr1110_modem_hal_reset))
@@ -2595,12 +2595,12 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 432<LI>Call Chain = lr1110_modem_hal_write &rArr; hal_mcu_trace_print &rArr; vprint &rArr; hal_uart_tx &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_trace_print
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_spi_in_out
+<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_wakeup
 <LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_wait_on_unbusy
 <LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_wait_on_busy
 <LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_compute_crc
 <LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_gpio_set_value
-<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_spi_in_out
-<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_hal_wakeup
 </UL>
 <BR>[Called By]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_stream_init
 <LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_set_region
@@ -2617,6 +2617,7 @@ Global Symbols
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_gnss_set_assistance_position
 <LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_gnss_push_solver_msg
 <LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_derive_keys
+<LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_set_rf_output
 <LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_gnss_set_constellations_to_use
 <LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_gnss_scan_autonomous_md
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_gnss_scan_assisted_md
@@ -2626,7 +2627,6 @@ Global Symbols
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_system_set_tcxo_mode
 <LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_system_set_reg_mode
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_system_set_dio_as_rf_switch
-<LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_set_rf_output
 </UL>
 
 <P><STRONG><a name="[17b]"></a>lr1110_modem_join</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, lr1110_modem_lorawan.o(i.lr1110_modem_join))
@@ -2908,10 +2908,10 @@ Global Symbols
 <P><STRONG><a name="[c1]"></a>timer_irq_handler</STRONG> (Thumb, 182 bytes, Stack size 24 bytes, smtc_hal_tmr_list.o(i.timer_irq_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = timer_irq_handler &rArr; timer_set_timeout &rArr; hal_rtc_start_alarm &rArr; HAL_RTC_SetAlarm_IT
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_set_timeout
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_set_time_ref_in_ticks
+<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_set_time_ref_in_ticks
 <LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_get_timer_elapsed_value
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_get_time_ref_in_ticks
+<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_set_timeout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_AlarmAEventCallback
 </UL>
@@ -2942,13 +2942,13 @@ Global Symbols
 <P><STRONG><a name="[127]"></a>timer_start</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, smtc_hal_tmr_list.o(i.timer_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = timer_start &rArr; timer_insert_new_head_timer &rArr; timer_set_timeout &rArr; hal_rtc_start_alarm &rArr; HAL_RTC_SetAlarm_IT
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_insert_timer
-<LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_insert_new_head_timer
-<LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_exists
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_set_time_ref_in_ticks
+<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_set_time_ref_in_ticks
 <LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_get_timer_elapsed_value
 <LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_critical_section_end
 <LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_critical_section_begin
+<LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_insert_timer
+<LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_insert_new_head_timer
+<LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_exists
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wifi_execute_scan
 <LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_init_software_watchdog
@@ -2962,10 +2962,10 @@ Global Symbols
 <P><STRONG><a name="[130]"></a>timer_stop</STRONG> (Thumb, 170 bytes, Stack size 24 bytes, smtc_hal_tmr_list.o(i.timer_stop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = timer_stop &rArr; timer_set_timeout &rArr; hal_rtc_start_alarm &rArr; HAL_RTC_SetAlarm_IT
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_set_timeout
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_stop_alarm
+<BR>[Calls]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_stop_alarm
 <LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_critical_section_end
 <LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_critical_section_begin
+<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_set_timeout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wifi_execute_scan
 <LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_set_value
@@ -3502,9 +3502,9 @@ Local Symbols
 <P><STRONG><a name="[173]"></a>interpret_basic_complete_result_from_buffer</STRONG> (Thumb, 146 bytes, Stack size 24 bytes, lr1110_modem_wifi.o(i.interpret_basic_complete_result_from_buffer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = interpret_basic_complete_result_from_buffer &rArr; uint64_from_array
 </UL>
-<BR>[Calls]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_wifi_read_mac_address_from_buffer
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uint64_from_array
+<BR>[Calls]<UL><LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uint64_from_array
 <LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uint16_from_array
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_wifi_read_mac_address_from_buffer
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_wifi_read_complete_results
 </UL>
@@ -3537,11 +3537,11 @@ Local Symbols
 <P><STRONG><a name="[18f]"></a>lr1110_modem_board_init_tcxo_io</STRONG> (Thumb, 62 bytes, Stack size 32 bytes, lr1110-modem-board.o(i.lr1110_modem_board_init_tcxo_io))
 <BR><BR>[Stack]<UL><LI>Max Depth = 496<LI>Call Chain = lr1110_modem_board_init_tcxo_io &rArr; lr1110_modem_system_set_tcxo_mode &rArr; lr1110_modem_hal_write &rArr; hal_mcu_trace_print &rArr; vprint &rArr; hal_uart_tx &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_system_set_tcxo_mode
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
+<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
 <LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_board_get_tcxo_wakeup_time
+<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_system_set_tcxo_mode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_board_init
 </UL>
@@ -3577,12 +3577,12 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[143]"></a>hal_mcu_deinit</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, smtc_hal_mcu.o(i.hal_mcu_deinit))
-<BR><BR>[Stack]<UL><LI>Max Depth = 448<LI>Call Chain = hal_mcu_deinit &rArr; hal_i2c_deinit &rArr; HAL_I2C_DeInit &rArr; HAL_I2C_MspDeInit &rArr; hal_mcu_panic &rArr; hal_mcu_trace_print &rArr; vprint &rArr; hal_uart_tx &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 448<LI>Call Chain = hal_mcu_deinit &rArr; hal_uart_deinit &rArr; HAL_UART_DeInit &rArr; HAL_UART_MspDeInit &rArr; hal_mcu_panic &rArr; hal_mcu_trace_print &rArr; vprint &rArr; hal_uart_tx &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_i2c_deinit
-<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_board_deinit_io
+<BR>[Calls]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_board_deinit_io
 <LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_uart_deinit
 <LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_spi_deinit
+<LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_i2c_deinit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_lpm_enter_stop_mode
 </UL>
@@ -3612,13 +3612,13 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[15a]"></a>hal_mcu_lpm_enter_stop_mode</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, smtc_hal_mcu.o(i.hal_mcu_lpm_enter_stop_mode))
-<BR><BR>[Stack]<UL><LI>Max Depth = 456<LI>Call Chain = hal_mcu_lpm_enter_stop_mode &rArr; hal_mcu_deinit &rArr; hal_i2c_deinit &rArr; HAL_I2C_DeInit &rArr; HAL_I2C_MspDeInit &rArr; hal_mcu_panic &rArr; hal_mcu_trace_print &rArr; vprint &rArr; hal_uart_tx &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 456<LI>Call Chain = hal_mcu_lpm_enter_stop_mode &rArr; hal_mcu_deinit &rArr; hal_uart_deinit &rArr; HAL_UART_DeInit &rArr; HAL_UART_MspDeInit &rArr; hal_mcu_panic &rArr; hal_mcu_trace_print &rArr; vprint &rArr; hal_uart_tx &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWREx_EnterSTOP2Mode
-<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_deinit_periph
-<LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_deinit
 <LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_critical_section_end
 <LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_critical_section_begin
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_deinit_periph
+<LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_deinit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_low_power_handler
 </UL>
@@ -3626,10 +3626,10 @@ Local Symbols
 <P><STRONG><a name="[15b]"></a>hal_mcu_lpm_exit_stop_mode</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, smtc_hal_mcu.o(i.hal_mcu_lpm_exit_stop_mode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 496<LI>Call Chain = hal_mcu_lpm_exit_stop_mode &rArr; hal_mcu_reinit &rArr; hal_spi_init &rArr; HAL_SPI_Init &rArr; HAL_SPI_MspInit &rArr; hal_mcu_panic &rArr; hal_mcu_trace_print &rArr; vprint &rArr; hal_uart_tx &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_reinit_periph
-<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_reinit
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_critical_section_end
+<BR>[Calls]<UL><LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_critical_section_end
 <LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_critical_section_begin
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_reinit_periph
+<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_reinit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_low_power_handler
 </UL>
@@ -3648,11 +3648,11 @@ Local Symbols
 <P><STRONG><a name="[15f]"></a>hal_mcu_reinit</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, smtc_hal_mcu.o(i.hal_mcu_reinit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 488<LI>Call Chain = hal_mcu_reinit &rArr; hal_spi_init &rArr; HAL_SPI_Init &rArr; HAL_SPI_MspInit &rArr; hal_mcu_panic &rArr; hal_mcu_trace_print &rArr; vprint &rArr; hal_uart_tx &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_system_clock_re_config_after_stop
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_i2c_init
-<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_board_init_io
+<BR>[Calls]<UL><LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lr1110_modem_board_init_io
 <LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_uart_init
 <LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_spi_init
+<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_system_clock_re_config_after_stop
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_i2c_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_lpm_exit_stop_mode
 </UL>
@@ -3701,9 +3701,9 @@ Local Symbols
 <P><STRONG><a name="[167]"></a>vprint</STRONG> (Thumb, 42 bytes, Stack size 280 bytes, smtc_hal_mcu.o(i.vprint))
 <BR><BR>[Stack]<UL><LI>Max Depth = 368<LI>Call Chain = vprint &rArr; hal_uart_tx &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vsprintf
+<BR>[Calls]<UL><LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_uart_tx
+<LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vsprintf
 <LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_uart_tx
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_mcu_trace_print
 </UL>
@@ -3754,8 +3754,8 @@ Local Symbols
 <LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_rtc_get_minimum_timeout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_stop
-<LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_insert_new_head_timer
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_irq_handler
+<LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_insert_new_head_timer
 </UL>
 
 <P><STRONG><a name="[ed]"></a>_fp_digits</STRONG> (Thumb, 366 bytes, Stack size 64 bytes, printfa.o(i._fp_digits), UNUSED)
